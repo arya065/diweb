@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+.upper-head {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.options-icon {
+    height: 50px;
+    width: 50px;
+}
+
+.header-logo {
+    margin: auto;
+}
+
+
+
+.header-logo h1 {
+    margin: 0;
+}
+
+.header-icons {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.header-icons img {
+    height: 30px;
+    width: 30px;
+}
+
+.header-search {
+    text-align: center;
+}
+
+.header-search #search {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    background-color: whitesmoke;
+    border: 0;
+}
+
+.articles {
+    display: flex;
+    height: 320px;
+}
+
+.articles article {
+    height: 210px;
+    width: 210px;
+    margin: 0;
+}
+
+.articles article img {
+    height: 210px;
+    width: 210px;
+}
+
+.articles article p {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.big {
+    font-weight: 600;
+}
+
+#retro-comoda {
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 10px;
+    background-color: #DEDACF;
+    padding: 10px;
+}
+
+footer nav p {
+    border-bottom: 1px grey solid;
+}
+
+.icons img {
+    margin-right: 20px;
+}
+
+#pinterest {
+    height: 24px;
+    width: 24px;
+}
