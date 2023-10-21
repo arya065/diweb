@@ -1,0 +1,84 @@
+body {
+    margin: 0%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.maisons-logo img {
+    margin-left: 10px;
+    height: 55px;
+    width: 100px;
+}
+
+.close-icon img {
+    height: 50px;
+    width: 50px;
+}
+
+.close-icon {
+    float: right;
+}
+
+.find-block {
+    background-color: rgb(57, 54, 54);
+    height: 50px;
+    text-align: center;
+}
+
+#find {
+    margin-top: 15px;
+    height: 20px;
+    width: 90%;
+    border-radius: 10px;
+    border: 0;
+    color: whitesmoke;
+}
+
+.go-back {
+    display: flex;
+    margin: 5px;
+}
+
+.go-back img {
+    height: 24px;
+    width: 24px;
+}
+
+.go-back p {
+    margin-top: 3px;
+}
+
+.option {
+    display: flex;
+    height: 24px;
+    border-bottom: 1px grey solid;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.option p {
+    margin: 0;
+    margin: 3px;
+}
+#muebles-auxiliares{
+    border: 0;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.option-content{
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+#look-all{
+    margin-top: 20px;
+    text-decoration: underline;
+}
