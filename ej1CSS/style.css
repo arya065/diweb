@@ -1,0 +1,18 @@
+body{
+    color: black;
+    background-color: white;
+} 
+td{
+    color: black;
+    background-color: white;
+
+}
+p{
+    color: black;
+    background-color: white;
+
+}
+.inverso {
+    color: white;
+    background-color: black;
+}
