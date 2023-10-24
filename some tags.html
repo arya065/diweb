@@ -1,0 +1,23 @@
+<form action="demo_form.asp" method="get">
+  <input list="browsers" />
+  <datalist id="browsers">
+    <option value="Internet Explorer"></option>
+    <option value="Firefox"></option>
+    <option value="Chrome"></option>
+    <option value="Opera"></option>
+    <option value="Safari"></option>
+  </datalist>
+
+  <input type="submit" />
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0 <input type="range" id="a" value="50" />100 +<input
+    type="number"
+    id="b"
+    value="50"
+  />
+  =<output name="x" for="a b"></output>
+</form>
+
+<input type="text" id="user" autofocus />
