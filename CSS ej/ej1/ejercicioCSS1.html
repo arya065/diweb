@@ -7,7 +7,7 @@
 	<meta name="author" content="Tu nombre y apellidos">
 	<meta name="description" content="Ejercicios con conceptos básicos de CSS">
 	<meta name="keywords" content="css3, diseño web, apliweb">
-	<link rel="STYLESHEET" type="text/css" href="estilos-web.css">
+	<link rel="STYLESHEET" type="text/css" href="style.css">
 	<!--Para la fuente-->
 	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -16,7 +16,7 @@
 <body>
 	<header>
 		<img src="logo.png" alt="logotipo de la empresa" width="140" height="122">
-		<h1>DISEÑO WEB <span>APLIWEB</span></h1>
+		<h1>DISEÑO WEB <span id="subject">APLIWEB</span></h1>
 	</header>
 	<nav>
 		<ul>
@@ -29,7 +29,7 @@
 	<main>
 		<section>
 			<h2>TÍTULO DE LA SECCIÓN PRINCIPAL</h2>
-			<article>
+			<article class = "news-art first" >
 				<h3><a href="art1.html">TÍTULO DEL ARTÍCULO 1</a></h3>
 				<img src="img-art1.png" alt="Imagen artículo 1" width="512" height="512">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus vestibulum luctus. Fusce
@@ -43,8 +43,8 @@
 					Pellentesque venenatis, mauris in malesuada aliquet, metus libero consectetur neque, in elementum ex
 					nisi ut leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 				</p>
-			</article>
-			<article>
+			</article class = "news-art" >
+			<article class = "news-art" >
 				<h3><a href="art2.html">TÍTULO DEL ARTÍCULO 2</a></h3>
 				<img src="img-art2.png" alt="Imagen artículo 2" width="512" height="512">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus vestibulum luctus. Fusce
@@ -58,8 +58,8 @@
 					Pellentesque venenatis, mauris in malesuada aliquet, metus libero consectetur neque, in elementum ex
 					nisi ut leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 				</p>
-			</article>
-			<article>
+			</article class = "news-art" >
+			<article class = "news-art" >
 				<h3><a href="art3.html">TÍTULO DEL ARTÍCULO 3</a></h3>
 				<img src="img-art3.png" alt="Imagen artículo 3" width="512" height="512">
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dapibus vestibulum luctus. Fusce
@@ -73,7 +73,7 @@
 					Pellentesque venenatis, mauris in malesuada aliquet, metus libero consectetur neque, in elementum ex
 					nisi ut leo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
 				</p>
-			</article>
+			</article class = "news-art" >
 		</section>
 	</main>
 	<footer>
