@@ -1,0 +1,11 @@
+#send:hover {
+    background-color: black;
+    color: white;
+}
+
+input[type="email"]:invalid {
+    color: red;
+}
+input[type="email"]:focus {
+    color: black;
+}
