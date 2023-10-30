@@ -1,42 +1,42 @@
 /* A */
-/* *{
+*{
     color: black;
     background-color: #ffffff;
     font-size: 14px;
     font-family: 'Open Sans', sans-serif;
-} */
+}
 /* B */
-/* header, footer{
+header, footer{
     background-color: #e6e7e8;
     border: 2px solid #3f3f3f;
     border-radius: 5px;
-} */
+}
 /* C */
-/* footer{
+footer{
     color: #3f3f3f;
     height: 2rem;
-} */
+}
 /* D */
-/* header img{
+header img{
     height: 4.35rem;
     width: 5rem;
-} */
+}
 /* E */
-/* h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
     font-family: 'Bree Serif', serif;
     color: #00acdd;
-} */
+}
 /* F */
-/* header h1 {
+header h1 {
     color: #004166;
     font-weight: bold;
-} */
+}
 /* G */
-/* header h1 #subject {
+header h1 #subject {
     color: #96bc33;
-} */
+}
 /* H */
-/* a {
+a {
     text-decoration: none;
     color: blue;
 }
@@ -48,44 +48,44 @@ a:visited {
 a:hover {
     cursor: pointer;
     color: #f58a1e;
-} */
+}
 /* I */
-/* nav ul li{
+nav ul li{
     list-style: none;
-} */
+}
 /* J */
-/* main{
+main{
     background-color: #004166;
     font-weight: bold;
     border: 2px solid #e6e7e8;
     border-radius: 5px;
-} */
+}
 /* K */
-/* section {
+section {
     border: 2px solid #004166;
     border-radius: 5px;
-} */
+}
 /* L */
-/* main section h2{
+main section h2{
     text-align: center;
-} */
+}
 /* M */
-/* main section .news-art {
+main section .news-art {
     border: 5px solid #e6e7e8;
     border-radius: 10px;
     width: 50%;
-} */
+}
 /* N */
-/* main section article img{
+main section article img{
     width: 30%;
     height: auto;
-} */
+}
 /* O */
-/* main section article p{
+main section article p{
     width: 70%;
     height: auto;
     text-align: justify;
-} */
+}
 /* P */
 .first{
     background-color: #e6e7e8;
