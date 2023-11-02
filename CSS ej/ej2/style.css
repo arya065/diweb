@@ -1,0 +1,33 @@
+body{
+    margin: 0;
+}
+.bold{
+    font-weight: bold;
+}
+form{
+    padding: 20px;
+}
+input, select{
+    padding-bottom: 5px;
+    border: 0;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.date, .send{
+    width: 20%;
+}
+.sexo, .datos{
+    width: auto;
+}
+.send{
+    border: 0;
+    height: 50px;
+    width: 200px;
+    background-color: black;
+    color: rgb(165, 139, 114);
+    border-radius: 30px;
+}
+.date{
+    margin-right: 10px;
+}
