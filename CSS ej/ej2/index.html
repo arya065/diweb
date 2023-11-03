@@ -10,26 +10,28 @@
 
 <body>
     <form action="index.html" method="post">
-        <p>
+        <h1>Formulario de registro</h1>
+        <p id="sexo-container">
             <input type="radio" name="sexo" id="sr" class="sexo">
             <label for="sr" class="bold">Sr.</label>
             <input type="radio" name="sexo" id="sra" class="sexo">
             <label for="sra" class="bold">Sra.</label>
         </p>
-        <p>
+        <p id="nombre-container">
             <input type="text" name="nombre" id="nombre" placeholder="Nombre/Razon Social">
         </p>
-        <p>
+        <p id="ape-container">
             <input type="text" name="ape" id="ape" placeholder="Apellidos*" required>
         </p>
-        <p>
+        <p id="mail-container">
             <input type="email" name="mail" id="mail" placeholder="Email*" required>
         </p>
-        <p>
+        <p id="pass-container">
             <input type="password" name="pass" id="pass" placeholder="Contrasena*" required>
         </p>
         <p>
-        <p class="bold">FECHA DE NACIMIENTO</p>
+        <p class="bold" id="fecha">FECHA DE NACIMIENTO</p>
+        <section class="date-container">
         <select name="day" id="day" class="date">
             <option value="" selected disabled hidden>Dia</option>
             <option value="1">1</option>
@@ -54,27 +56,28 @@
             <option value="1">2003</option>
             <option value="1">2004</option>
         </select>
+        </section>
         </p>
-        <p>
+        <p id="dni-container">
             <input type="text" name="dni" id="dni" placeholder="DNI/NIF/NIE*" required>
         </p>
-        <p>
+        <p id="dirr-container">
             <input type="text" name="dirr" id="dirr" placeholder="Direccion*" required>
         </p>
-        <p>
+        <p id="cod-container">
             <input type="text" name="cod" id="cod" placeholder="Codigo postal*" required>
         </p>
-        <p>
+        <p id="ciudad-container">
             <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad*" required>
         </p>
-        <p>
+        <p id="pais-container">
             <select name="pais" id="pais">
                 <option value="es">España</option>
                 <option value="ger">Alemania</option>
                 <option value="fr">Francia</option>
             </select>
         </p>
-        <p>
+        <p id="provincia-container">
             <select name="provincia" id="provincia">
                 <option value="" selected disabled hidden>Provincia*</option>
                 <option value="malaga">Malaga</option>
@@ -82,11 +85,11 @@
                 <option value="andalucia">Andalucia</option>
             </select>
         </p>
-        <p>Informacion adicional</p>
-        <p>
+        <p class="bold"id="adicional">Informacion adicional</p>
+        <p id="tel-container">
             <input type="tel" name="tel" id="tel" placeholder="Telefono movil*" required>
         </p>
-        <p>
+        <p id="datos-personales-container">
             <input type="checkbox" name="datos-personales" id="datos-personales" class="datos">
             <label for="datos-personales">Estos datos personales se utilizaran para responder a sus busquedas, procesar
                 sus pedidos o autorizar el acceso</label>

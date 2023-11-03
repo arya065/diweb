@@ -6,6 +6,8 @@ body{
 }
 form{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 input, select{
     padding-bottom: 5px;
@@ -27,7 +29,24 @@ input, select{
     background-color: black;
     color: rgb(165, 139, 114);
     border-radius: 30px;
+    margin-top: 20px;
 }
 .date{
+    margin-top: 16px;
     margin-right: 10px;
 }
+.date-container{
+    flex-direction: row;
+}
+select {
+    background-color: white;
+    color: grey;
+}
+select option {
+    color: black;
+}
+#adicional, #fecha{
+    border-bottom: 3px solid grey;
+}
+
+
