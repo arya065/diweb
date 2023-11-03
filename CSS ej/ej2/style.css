@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    text-align: center;
+}
+form{
+    margin: auto;
+}
+.line {
+    border: 0;
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+::placeholder {
+    color: black;
+}
+
+#send {
+    border: 0;
+    border-radius: 30px;
+    background-color: black;
+    color: rgb(165, 139, 114);
+    font-weight: 1000;
+    height: 50px;
+    width: 200px;
+    margin-top: 20px;
+}
