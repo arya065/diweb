@@ -1,0 +1,64 @@
+header {
+    text-align: center;
+    color: white;
+    background-color: aqua;
+}
+
+nav {
+    text-align: center;
+    color: white;
+    background-color: orange;
+    order: -1;
+}
+
+article {
+    text-align: center;
+    color: white;
+    background-color: purple;
+}
+
+aside {
+    text-align: center;
+    color: white;
+    background-color: rgb(141, 141, 233);
+}
+
+footer {
+    text-align: center;
+    color: white;
+    background-color: blue;
+}
+main,#contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    header{
+        width: 100%;
+        height: 50px;
+        vertical-align: middle;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    main{
+        flex-direction: row;
+    }
+    article{
+        width: 60%;
+        height: 500px;
+    }
+    nav{
+        width: 20%;
+        height: 500px;
+    }
+    aside{
+        width: 20%;
+        height: 500px;
+    }
+    footer{
+        width: 100%;
+        height: 50px;
+    }
+}
