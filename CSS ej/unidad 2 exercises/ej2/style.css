@@ -1,38 +1,47 @@
 /* для телефонов */
-/* div {
-    color: white;
-    background-color: blue;
-    text-align: center;
-    border-bottom: 1px solid grey;
+@media(min-width:500px) {
+    div {
+        color: white;
+        background-color: blue;
+        text-align: center;
+        border-bottom: 1px solid grey;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-section {
-    display: flex;
-    flex-direction: column;
-} */
 /* для планшетов: */
-/* div {
-    color: white;
-    background-color: blue;
-    text-align: center;
-    border-bottom: 1px solid grey;
-    width: 25%;
-}
-section {
-    display: flex;
-    flex-direction: row;
-} */
-/* для ПК: */
-/* div {
-    color: white;
-    text-align: center;
-    border-bottom: 1px solid grey;
-    width: 15%;
+@media(min-width:1000px) {
+    div {
+        color: white;
+        background-color: blue;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        width: 25%;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
-section {
-    background-color: blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-} */
+/* для ПК: */
+@media(min-width:1500px) {
+    div {
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid grey;
+        width: 15%;
+    }
+
+    section {
+        background-color: blue;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
