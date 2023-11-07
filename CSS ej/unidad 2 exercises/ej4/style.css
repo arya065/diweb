@@ -37,14 +37,15 @@ div#contenido,#test {
     flex-direction: column;
 }
 
-/* @media(min-width:700px) {
+@media(min-width:700px) {
     div#contenido {
         flex-direction: row;
         flex-wrap: wrap;
     }
 
     header {
-        flex-grow: 1;
+        flex-basis: 100%;
+        /* flex-grow: 1; */
     }
 
     aside {
@@ -52,18 +53,17 @@ div#contenido,#test {
     }
 
     footer {
-        flex-grow: 1;
+        flex-basis: 100%;
+        /* flex-grow: 1; */
     }
-} */
+}
 
-@media(min-width:700px) {
+/* @media(min-width:700px) {
     div#test {
-        display: flex;
         flex-direction: row;
-        
     }
 
     aside {
         width: 50%;
     }
-}
+} */
