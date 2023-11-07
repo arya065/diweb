@@ -7,7 +7,7 @@ header {
 }
 
 article {
-    background-color: blue;
+    background-color: rgb(76, 76, 243);
     height: 100px;
 }
 
@@ -23,13 +23,47 @@ footer {
     background-color: green;
 }
 
-header, #aside1, #aside2, footer {
+header,
+#aside1,
+#aside2,
+footer {
     text-align: center;
     height: 30px;
     line-height: 30px;
 }
 
-main {
+div#contenido,#test {
     display: flex;
     flex-direction: column;
+}
+
+/* @media(min-width:700px) {
+    div#contenido {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header {
+        flex-grow: 1;
+    }
+
+    aside {
+        flex-basis: 50%;
+    }
+
+    footer {
+        flex-grow: 1;
+    }
+} */
+
+@media(min-width:700px) {
+    div#test {
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    aside {
+        width: 50%;
+    }
 }
