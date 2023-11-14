@@ -1,0 +1,43 @@
+section#ofertas {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-oferta {
+    border: 1px solid grey;
+    border-radius: 20px;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+h3 {
+    text-align: center;
+    order: -1;
+}
+
+img {
+    order: -1;
+    align-self: center;
+}
+
+.boton-cesta {
+    color: white;
+    font-weight: 900;
+    background-color: orange;
+    border: 1px solid green;
+    width: 50%;
+    height: 40px;
+    align-self: center;
+    margin-bottom: 30px;
+    box-shadow: 0px 3px 5px green;
+}
+
+@media(max-width: 700px) {
+    section#ofertas {
+        flex-direction: column;
+    }
+}
