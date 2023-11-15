@@ -106,7 +106,7 @@ div#content main section article.news-art p {
   text-align: center;
 }
 
-nav#main-menu>ul>li>a,
+nav#main-menu>ul,
 nav#main-menu>input {
   display: none;
 }
@@ -116,10 +116,21 @@ nav#main-menu {
 }
 
 nav#main-menu>label>span {
-  color: red;
+  color: white;
   height: 50px;
   width: 50px;
 }
+
+nav#main-menu:hover ul{
+  display: block;
+}
+nav#main-menu:hover ul>li{
+  margin: 10px;
+}
+
+/* nav#main-menu>ul:focus{
+  display: block;
+} */
 
 @media(min-width: 800px) {
 
