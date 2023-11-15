@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+div#contenido {
+    display: flex;
+    flex-direction: column;
+}
+
+section#ofertas {
+    flex-direction: column;
+}
+
+.item-oferta {
+    border: 1px solid grey;
+    border-radius: 20px;
+    flex-basis: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+}
+
+section#ofertas>article.item-oferta h3 {
+    text-align: center;
+    order: -1;
+}
+
+section#ofertas>article.item-oferta img {
+    order: -1;
+    align-self: center;
+}
+
+section#ofertas>article.item-oferta .boton-cesta {
+    color: white;
+    font-weight: 900;
+    background-color: orange;
+    border: 1px solid green;
+    width: 50%;
+    height: 40px;
+    align-self: center;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 5px green;
+}
+
+@media(min-width: 800px) {
+    section#ofertas {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
