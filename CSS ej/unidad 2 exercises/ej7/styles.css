@@ -117,8 +117,7 @@ nav#main-menu {
 
 nav#main-menu>label>span {
   color: white;
-  height: 50px;
-  width: 50px;
+  font-size: 50px;
 }
 
 nav#main-menu:hover ul{
