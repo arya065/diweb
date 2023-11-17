@@ -120,10 +120,11 @@ nav#main-menu>label>span {
   font-size: 50px;
 }
 
-nav#main-menu:hover ul{
+nav#main-menu:hover ul {
   display: block;
 }
-nav#main-menu:hover ul>li{
+
+nav#main-menu:hover ul>li {
   margin: 10px;
 }
 
@@ -134,7 +135,8 @@ nav#main-menu:hover ul>li{
 @media(min-width: 800px) {
 
   nav#main-menu>label,
-  nav#main-menu>input {
+  nav#main-menu>input,
+  nav#main-menu>label {
     display: none;
   }
 
@@ -147,6 +149,18 @@ nav#main-menu:hover ul>li{
   nav#main-menu ul li {
     flex-basis: 25%;
     text-align: center;
+  }
+
+  nav#main-menu:hover ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  nav#main-menu:hover ul>li {
+    flex-basis: 25%;
+    text-align: center;
+    margin: 0;
   }
 
   main section {
