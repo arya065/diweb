@@ -33,6 +33,7 @@ header {
 	display: flex;
 	/*La cabecera ocupa todo el ancho de la página*/
 	flex-basis: 100%;
+	justify-content: space-between;
 }
 
 /*La hamburguesa la colocamos al principio*/
