@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+header nav#menu-principal ul#menu {
+    display: none;
+}
+
+header nav#bloque-iconos {
+    width: 49%;
+}
+
+header nav#bloque-iconos ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header picture {
+    width: 49%;
+}
+
+header nav#menu-principal div#hamburguesa {
+    width: 100%;
+}
