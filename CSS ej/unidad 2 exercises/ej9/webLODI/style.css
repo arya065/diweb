@@ -8,16 +8,23 @@ body {
 header {
     display: flex;
     height: 50px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-start;
 }
 
 header picture {
     order: 2;
+    width: 40%;
+
 }
 
 header picture img {
     height: 50px;
+
+}
+
+header nav#menu-principal {
+    width: 20%;
 }
 
 header nav#menu-principal label {
@@ -27,6 +34,10 @@ header nav#menu-principal label {
 header nav#menu-principal input,
 header nav#menu-principal ul {
     display: none;
+}
+
+header nav#buscador {
+    width: 20%;
 }
 
 header nav#buscador ul {
@@ -41,6 +52,8 @@ header nav#buscador ul li a i {
 
 header nav#compra {
     order: 50;
+    width: 20%;
+    text-align: right;
 }
 
 header nav#compra ul {
