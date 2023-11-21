@@ -62,6 +62,18 @@ main section form{
 main section form label {
     display: none;
 }
+main section form select{
+    /* padding: 0; */
+    /* margin: 0; */
+    width: 52.5%;
+    /* flex-basis: 60%; */
+    /* flex-grow: 5; */
+    height: 44px;
+}
+
+main section form textarea{
+    height: 300px;
+}
 main section form * {
     width: 50%;
     height: 30px;
