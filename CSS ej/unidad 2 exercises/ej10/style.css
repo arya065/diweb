@@ -9,21 +9,25 @@ header {
     flex-wrap: wrap;
     /* border: 1px solid black; */
 }
-header nav#menu-principal{
+
+header nav#menu-principal {
     width: 100%;
     text-align: center;
     background-color: black;
     height: 50px;
 }
+
 header nav#menu-principal ul#menu {
     display: none;
 }
-header nav#menu-principal div#hamburguesa{
+
+header nav#menu-principal div#hamburguesa {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-header nav#menu-principal div#hamburguesa span{
+
+header nav#menu-principal div#hamburguesa span {
     color: white;
     height: 25px;
 }
@@ -50,50 +54,60 @@ header picture {
     width: 49%;
     height: 100px;
 }
+
 /* main */
-main section h2{
+main section h2 {
     text-align: center;
 }
-main section form{
+
+main section form {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 main section form label {
     display: none;
 }
-main section form select{
-    /* padding: 0; */
-    /* margin: 0; */
-    width: 52.5%;
-    /* flex-basis: 60%; */
-    /* flex-grow: 5; */
-    height: 44px;
+
+main section form select {
+    background-color: lightgrey;
 }
 
-main section form textarea{
+main section form select,
+main section form input,
+main section form textarea {
+    width: 50%;
+    box-sizing: content-box;
+    /* height: 44px; */
+}
+
+main section form textarea {
     height: 300px;
 }
+
 main section form * {
     width: 50%;
     height: 30px;
     padding: 5px;
     margin: 5px;
 }
+
 main section form input:hover,
 main section form textarea:hover,
-main section form select:hover{
+main section form select:hover {
     background-color: black;
     color: white;
-    border: 2px solid lightgrey;
+    outline: 5px solid lightgrey;
     border-radius: 3px;
-    /* padding: 0; */
 }
-main section form input[type = button]{
+
+main section form input[type=button] {
     background-color: black;
     color: white;
 }
-main section form input[type = button]:hover{
+
+main section form input[type=button]:hover {
     background-color: white;
     color: black;
 }
