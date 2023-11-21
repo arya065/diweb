@@ -7,26 +7,74 @@ body {
 header {
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
-
+header nav#menu-principal{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    height: 50px;
+}
 header nav#menu-principal ul#menu {
     display: none;
+}
+header nav#menu-principal div#hamburguesa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header nav#menu-principal div#hamburguesa span{
+    color: white;
+    height: 25px;
 }
 
 header nav#bloque-iconos {
     width: 49%;
+    height: 100px;
 }
 
 header nav#bloque-iconos ul {
     list-style-type: none;
     display: flex;
+    justify-content: end;
+    margin: 0%;
+}
+
+header nav#bloque-iconos ul li a i {
+    color: black;
+    font-size: 50px;
+    margin: 20px;
 }
 
 header picture {
     width: 49%;
+    height: 100px;
 }
-
-header nav#menu-principal div#hamburguesa {
-    width: 100%;
+/* main */
+main section h2{
+    text-align: center;
+}
+main section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main section form label {
+    display: none;
+}
+main section form * {
+    width: 50%;
+    height: 30px;
+    margin: 5px;
+}
+main section form *:hover{
+    
+}
+main section form input[type = button]{
+    background-color: black;
+    color: white;
+}
+main section form input[type = button]:focus{
+    background-color: white;
+    color: black;
 }
