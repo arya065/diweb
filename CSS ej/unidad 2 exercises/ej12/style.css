@@ -1,0 +1,22 @@
+body nav ul {
+    list-style-type: none;
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+    background-color: lightgrey;
+}
+body nav ul li{
+    flex-basis: 5%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#login{
+    flex-grow: 5;
+    text-align: right;
+}
+body nav ul li a{
+    text-decoration: none;
+    color: blue;
+    border-bottom: 1px solid black;
+    border-radius: 3px;
+}
