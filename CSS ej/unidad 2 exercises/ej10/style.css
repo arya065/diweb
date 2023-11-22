@@ -73,6 +73,10 @@ header nav#menu-principal ul#menu li a {
     background-color: black;
 }
 
+header nav#menu-principal ul#menu li a:hover {
+    text-decoration: underline;
+}
+
 .submenu,
 .mas {
     display: none;
@@ -137,15 +141,4 @@ main section form input[type=button]:hover {
 
 footer {
     display: none;
-}
-
-@media (min-width:1024px) {
-    footer {
-        display: block;
-    }
-
-    footer nav ul {
-        display: flex;
-        flex-direction: row;
-    }
 }
