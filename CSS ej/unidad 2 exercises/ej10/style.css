@@ -55,6 +55,29 @@ header picture {
     height: 100px;
 }
 
+/* open menu */
+header nav#menu-principal:hover ul#menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+header nav#menu-principal:hover {
+    height: 100px;
+}
+
+header nav#menu-principal ul#menu li a {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+.submenu,
+.mas {
+    display: none;
+}
+
 /* main */
 main section h2 {
     text-align: center;
@@ -110,4 +133,19 @@ main section form input[type=button] {
 main section form input[type=button]:hover {
     background-color: white;
     color: black;
+}
+
+footer {
+    display: none;
+}
+
+@media (min-width:1024px) {
+    footer {
+        display: block;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: row;
+    }
 }
