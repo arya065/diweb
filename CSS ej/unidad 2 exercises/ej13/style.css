@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     background-color: white;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,7 @@ header {
 
 
 header .logo {
-    width: 200px;
+    height: 50px;
 }
 
 header nav img,
@@ -33,7 +33,7 @@ header form {
 }
 
 header form input {
-    height: 29px;
+    height: 28px;
     border: 0;
     background-color: rgb(233, 233, 233);
 }
@@ -41,20 +41,45 @@ header form input {
 
 /* main */
 main {
-    border: 1px solid green;
-    height: 1000px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+main div {
+    width: 50%;
+    padding: 5px;
+    text-align: center;
+}
+
+main div img {
+    width: 100%;
+}
+
+main div p {
+    margin: 5px;
+}
+
+.old-price {
+    text-decoration: line-through;
+}
+
+.big {
+    font-weight: 900;
 }
 
 /* footer */
 footer {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     background-color: antiquewhite;
+    padding: 20px;
 }
-footer div img{
+
+footer div img {
     height: 50px;
-    margin-top: 10px;
     margin-right: 20px;
 }
-footer section p{
+
+footer section p {
     border-bottom: 1px solid black;
 }
