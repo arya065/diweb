@@ -11,7 +11,7 @@ body {
     height: 477px;
     border: 2px solid black;
     /* overflow: hidden; */
-    border-radius: 10px;
+    margin: auto;
 }
 
 .slider-line {
@@ -21,9 +21,12 @@ body {
     display: flex;
     position: relative;
     left: 0;
-    transition: all ease 1s;
+    transition: all ease-in-out 1s;
 }
 
 img {
-    margin: 5%;
+    width: 300px;
+    height: 370px;
+    margin: auto;
+    border-radius: 30px;
 }
