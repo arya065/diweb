@@ -1,0 +1,89 @@
+body {
+    height: 100vh;
+}
+
+label {
+    display: block;
+    width: 100px;
+    height: 99px;
+}
+
+input {
+    display: none;
+}
+
+span {
+    display: block;
+    position: relative;
+    top: 0;
+    transform: rotate(0);
+    transition: top 1s, transform 1s 1s;
+    width: 100px;
+    height: 15px;
+    margin-bottom: 14px;
+    margin-top: 14px;
+    background-color: black;
+}
+
+input:checked+span {
+    top: 29px;
+    transform: rotate(45deg);
+}
+
+input:checked+span+span+span {
+    top: -29px;
+    transform: rotate(-45deg);
+}
+
+input:checked+span+span {
+    background-color: unset;
+}
+
+/* unchecked */
+input:not(:checked)+span {
+    top: 0;
+    transform: rotate(0);
+    transition: transform 1s, top 1s 1s;
+}
+
+input:not(:checked)+span+span+span {
+    top: 0;
+    transform: rotate(0);
+    transition: transform 1s, top 1s 1s;
+}
+
+input:not(:checked)+span+span {
+    background-color: black;
+    transition: 1s;
+}
+
+/* input:checked span{
+
+} */
+/* .origin {
+    width: 200px;
+    height: 20px;
+    border: 1px dotted black;
+
+} */
+/* #t1 {
+    position: absolute;
+    top: 11.5%;
+    width: 200px;
+    height: 20px;
+    border: 1px solid red;
+    transform: skewY(60deg);
+    transform: scaleY(1.1) scaleX(1.1);
+    background-color: teal;
+    transition: 3s;
+} */
+
+/* #t2 {
+    position: relative;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+    transform: translateX(200px) rotate(20deg);
+    transform: rotate(90deg)translateX(200px);
+    transform: translateY(50px);
+} */
