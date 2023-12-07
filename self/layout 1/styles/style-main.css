@@ -169,5 +169,28 @@ section {
     align-items: center;
 }
 
+#t6-right div {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
 
-/* FOOTER */
+#t6-right div p {
+    text-align: center;
+    margin: 20px;
+}
+
+#t7 {
+    height: 78px;
+    display: flex;
+    justify-content: center;
+}
+
+#t8 {
+    height: 756px;
+}
+
+#t8 div img {
+    width: 100%;
+    margin-top: -182px;
+}
