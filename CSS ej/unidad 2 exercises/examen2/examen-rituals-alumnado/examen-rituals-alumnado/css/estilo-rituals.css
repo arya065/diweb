@@ -288,3 +288,96 @@ footer picture img {
 footer small {
     margin: 20px;
 }
+
+
+@media (min-width: 600px) {
+    main section {
+        justify-content: flex-start;
+        gap: 1%;
+    }
+
+    main section article {
+        width: 32%;
+    }
+}
+
+@media (min-width: 800px) {
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    header nav#menu-principal label,
+    header nav#menu-principal input {
+        display: none;
+    }
+
+    header nav#menu-principal ul {
+        display: flex;
+        color: white;
+        
+    }
+
+    header nav#menu-principal input:checked+ul li {
+        display: block;
+    }
+
+    header nav#menu-principal input:checked+ul li a {
+        color: white;
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer nav {
+        width: 40%;
+    }
+
+    footer picture,
+    footer small {
+        width: 100%;
+    }
+
+    footer nav#menu-adicional {
+        width: 70%;
+    }
+
+    footer nav#menu-social {
+        width: 30%;
+    }
+
+    footer nav#menu-adicional ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    footer nav#menu-adicional ul li {
+        width: 24%;
+        border: none;
+    }
+
+    footer nav#menu-adicional ul li span {
+        width: 100%;
+    }
+
+    footer nav#menu-adicional ul li>span+span {
+        display: none;
+    }
+
+    footer nav#menu-social ul li,
+    footer nav#menu-social ul li a,
+    footer nav#menu-social ul li a img {
+        width: 50px;
+    }
+
+}
