@@ -1,0 +1,38 @@
+/* body: background-color: #efedeb;
+header: background-color: #1a191a;
+section:  background-color: #f5f4f3;
+h2 y div (section):  background-color: black;
+article: background: white; color: #515152; border: 2px solid #eeedec;
+img del article: background-color: #faf9f8;
+footer: background-color: black; */
+
+body {
+    background-color: #efedeb;
+}
+
+header {
+    background-color: #1a191a;
+}
+
+section {
+    background-color: #f5f4f3;
+}
+
+h2,
+div {
+    background-color: black;
+}
+
+article {
+    background: white;
+    color: #515152;
+    border: 2px solid #eeedec;
+}
+
+article img {
+    background-color: #faf9f8;
+}
+
+footer {
+    background-color: black;
+}
