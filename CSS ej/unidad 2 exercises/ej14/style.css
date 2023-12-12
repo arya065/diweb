@@ -81,7 +81,7 @@ header nav:first-child label input:checked+span+span+span {
 }
 
 header nav:first-child label input:checked+span+span {
-    background-color: none;
+    background-color: unset;
 }
 
 /* unchecked */
@@ -99,8 +99,7 @@ header nav:first-child label input:not(:checked)+span+span+span {
 
 header nav:first-child label input:not(:checked)+span+span {
     /* background-color: black; */
-    /* transform: ; */
-    /* transition: 1s 1s; */
+    transition: 1s 0.25s;
 }
 
 /* main */
