@@ -53,8 +53,9 @@ input:not(:checked)+span+span+span {
 }
 
 input:not(:checked)+span+span {
-    background-color: black;
-    transition: 1s 1s;
+    /* background-color: black; */
+    /* width: 200%; */
+    transition: 1s 0.25s;
 }
 
 /* input:checked span{

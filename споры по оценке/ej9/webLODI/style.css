@@ -108,6 +108,7 @@ main article a>picture {
 
 main article a picture img {
     width: 100%;
+    height: auto;
 }
 
 /* footer */
