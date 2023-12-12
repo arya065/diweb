@@ -1,11 +1,78 @@
-body{
+body {
     background-color: lightblue;
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 10px;
 }
-label{
-    
+
+
+/* #checked {
+    pointer-events: none;
 }
-span{
+
+#checked label input {
+    pointer-events: auto;
+} */
+
+label {
+    display: block;
+    background-color: rgb(70, 66, 66);
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    /* transform: 1s 1s; */
+    transition: 0.25s;
+}
+
+label>* {
+    transition: 0.25s;
+}
+
+input {
+    display: none;
+}
+
+span {
+    display: block;
+    height: 10px;
+    width: 100px;
     background-color: white;
+}
+
+label span:nth-child(3) {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+ul {
+    display: none;
+    background-color: rgb(70, 66, 66);
+    list-style: none;
+    padding: 10px;
+    height: 100vh;
+    position: absolute;
+    width: 300px;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+li {
+    color: white;
+    border-top: 1px solid whitesmoke;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* checked */
+/* #content+label>input:checked {
+    background-color: black;
+} */
+
+#content+label>input:checked {
+    background-color: black;
+}
+
+input:checked+span {
+    background-color: black;
 }
