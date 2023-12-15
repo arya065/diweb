@@ -13,7 +13,6 @@ div#content {
     margin-left: 0;
     transition: 0.5s;
     /* overflow: hidden; */
-    background-color: aquamarine;
 }
 
 label {
@@ -50,7 +49,7 @@ ul {
     background-color: rgb(70, 66, 66);
     list-style: none;
     padding: 10px;
-    height: 100vh;
+    height: 100%;
     width: 300px;
     margin: 0;
     left: 0;
