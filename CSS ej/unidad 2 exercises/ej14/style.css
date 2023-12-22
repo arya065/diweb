@@ -62,7 +62,7 @@ header nav:first-child label span {
     position: relative;
     top: 0;
     transform: rotate(0);
-    transition: top 1s, transform 1s 1s;
+    transition: top 0.25s, transform 0.25s 0.25s;
     width: 50px;
     height: 5px;
     margin-bottom: 14px;
@@ -88,18 +88,18 @@ header nav:first-child label input:checked+span+span {
 header nav:first-child label input:not(:checked)+span {
     top: 0;
     transform: rotate(0);
-    transition: transform 1s, top 1s 1s;
+    transition: transform 0.25s, top 0.25s 0.25s;
 }
 
 header nav:first-child label input:not(:checked)+span+span+span {
     top: 0;
     transform: rotate(0);
-    transition: transform 1s, top 1s 1s;
+    transition: transform 0.25s, top 0.25s 0.25s;
 }
 
 header nav:first-child label input:not(:checked)+span+span {
     /* background-color: black; */
-    transition: 1s 0.25s;
+    transition: 0.25s 0.1s;
 }
 
 /* main */
