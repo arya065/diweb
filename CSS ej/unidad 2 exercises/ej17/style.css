@@ -1,148 +1,22 @@
-body {
-    margin: 0%;
+input#send{
+    color: rgb(153,135,114);
+    background-color: black;
+    border-radius: 30px;
+    height: 50px;
+    width: 150px;
+    font-weight: 900;
 }
-a {
+form p input{
+    border: 0;
+    border-bottom: 1px solid grey;
+    color: black;
+    width: 90%;
+}
+form p input::placeholder{
+    color: black;
+}
+form p a {
     color: black;
     text-decoration: none;
 }
-a:hover{
-    color: black;
-}
-header {
-    /* border: 1px solid red; */
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-}
 
-
-header .logo {
-    height: 50px;
-}
-
-header nav img,
-header form img {
-    width: 50px;
-}
-
-header form {
-    width: 80%;
-    height: 30px;
-    margin: auto;
-    /* border: 1px solid black; */
-    background-color: rgb(233, 233, 233);
-    display: flex;
-    justify-content: center;
-}
-
-header form input {
-    height: 28px;
-    border: 0;
-    background-color: rgb(233, 233, 233);
-}
-
-/* burger */
-
-header nav:first-child label {
-    display: block;
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
-}
-
-header nav:first-child label input {
-    display: none;
-}
-
-header nav:first-child label span {
-    display: block;
-    position: relative;
-    top: 0;
-    transform: rotate(0);
-    transition: top 0.25s, transform 0.25s 0.25s;
-    width: 50px;
-    height: 5px;
-    margin-bottom: 14px;
-    margin-top: 14px;
-    background-color: black;
-}
-
-header nav:first-child label input:checked+span {
-    top: 19px;
-    transform: rotate(45deg);
-}
-
-header nav:first-child label input:checked+span+span+span {
-    top: -19px;
-    transform: rotate(-45deg);
-}
-
-header nav:first-child label input:checked+span+span {
-    background-color: unset;
-}
-
-/* unchecked */
-header nav:first-child label input:not(:checked)+span {
-    top: 0;
-    transform: rotate(0);
-    transition: transform 0.25s, top 0.25s 0.25s;
-}
-
-header nav:first-child label input:not(:checked)+span+span+span {
-    top: 0;
-    transform: rotate(0);
-    transition: transform 0.25s, top 0.25s 0.25s;
-}
-
-header nav:first-child label input:not(:checked)+span+span {
-    /* background-color: black; */
-    transition: 0.25s 0.1s;
-}
-
-/* main */
-main {
-    /* border: 1px solid green; */
-    display: flex;
-    justify-content: space-between;
-}
-
-main div {
-    width: 50%;
-    padding: 5px;
-    text-align: center;
-}
-
-main div img {
-    width: 100%;
-}
-
-main div p {
-    margin: 5px;
-}
-
-.old-price {
-    text-decoration: line-through;
-}
-
-.big {
-    font-weight: 900;
-}
-
-/* footer */
-footer {
-    /* border: 1px solid black; */
-    background-color: antiquewhite;
-    padding: 20px;
-}
-
-footer div img {
-    height: 50px;
-    margin-right: 20px;
-}
-
-footer section p {
-    border-bottom: 1px solid black;
-}
