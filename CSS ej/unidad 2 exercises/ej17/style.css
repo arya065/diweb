@@ -1,22 +1,66 @@
-input#send{
-    color: rgb(153,135,114);
+input#send {
+    color: rgb(153, 135, 114);
     background-color: black;
     border-radius: 30px;
     height: 50px;
     width: 150px;
     font-weight: 900;
 }
-form p input{
+
+form p {
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+
+form p input {
     border: 0;
     border-bottom: 1px solid grey;
     color: black;
     width: 90%;
+    outline: none;
 }
-form p input::placeholder{
-    color: black;
+
+form p input::placeholder {
+    opacity: 0;
 }
+
 form p a {
     color: black;
     text-decoration: none;
 }
 
+.placeholder {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    transition: all 0.25s;
+}
+
+.underline {
+    background-color: aquamarine;
+    display: block;
+    position: relative;
+    height: 3px;
+    width: 0%;
+    bottom: 2px;
+    border-radius: 10px;
+}
+
+/* placeholder animation */
+form p input:focus+.placeholder {
+    font-size: 12px;
+    margin-top: -10px;
+    transition: all 0.25s;
+}
+
+form p input:focus~.underline {
+    width: 91%;
+    transition: all 0.25s;
+}
+
+form p input:not(:placeholder-shown)+.placeholder {
+    font-size: 12px;
+    margin-top: -10px;
+}
