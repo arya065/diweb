@@ -4,6 +4,7 @@ body {
 
 .row {
     background-image: url(images/99.jpg);
+    background-size: 100% 100%;
 }
 
 .row div ul {
