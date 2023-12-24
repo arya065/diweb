@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+.row {
+    background-image: url(images/99.jpg);
+}
+
+.row div ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none; */
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+ul li {
+    width: 20%;
+    margin: 10px;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    outline: 1px solid black;
+    transition: all 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a img {
+    width: 100%;
+}
+
+a[title]::after {
+    content: attr(title);
+}
+
+.left1 {
+    rotate: -5deg;
+}
+
+.left2 {
+    rotate: -3deg;
+}
+
+.right1 {
+    rotate: 5deg;
+}
+
+.right2 {
+    rotate: 3deg;
+}
+
+li:hover {
+    position: relative;
+    scale: 1.1;
+    rotate: 0deg;
+    transition: all 0.5s;
+}
+
+/* 
+ul li:nth-child(even) {
+    rotate: 5deg;
+}
+
+ul li:nth-child(odd) {
+    rotate: -5deg;
+}
+
+li:nth-child(odd):hover {
+    position: relative;
+    scale: 1.1;
+    rotate: 0deg;
+    transition: all 0.5s;
+}
+
+li:nth-child(even):hover {
+    position: relative;
+    scale: 1.1;
+    rotate: 0deg;
+    transition: all 0.5s;
+} */
