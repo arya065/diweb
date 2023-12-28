@@ -60,7 +60,7 @@ header nav#menu-principal:hover ul#menu {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 header nav#menu-principal:hover {
@@ -77,17 +77,17 @@ header nav#menu-principal ul#menu li a:hover {
     text-decoration: underline;
 }
 
-header nav#menu-principal ul#menu li a span:first-child {
+header nav#menu-principal ul#menu li a {
     display: inline-block;
     position: relative;
 }
 
 .tooltips {
-    /* visibility: hidden; */
+    width: 100px;
+    visibility: hidden;
     position: absolute;
     background-color: grey;
-    border-radius: 50px;
-    /* left: 100px; */
+    border-radius: 5px;
 }
 
 header nav#menu-principal ul#menu li a span:first-child:hover~.tooltips {
