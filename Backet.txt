@@ -1,0 +1,47 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*"
+    }
+  ]
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title> WEB SESIÓN 3 AWS</title>
+  <meta charset="utf-8">
+  <meta content="María José García Lorite" name="author"/>
+  <meta content="Trabajamos con Bucket S3 de AWS" name="description" />
+  <meta content="aws, bucket, S3, contenedores, almacenameinto" name="keywords" />
+  <meta name="robots" content="index, follow" />
+  <meta name="lang" content="es-ES" />
+</head>
+<body>
+    <h1>Sitio web María José García Lorite</h1>
+    
+    <h2>Recurso de imagen del
+
+
+https://awspolicygen.s3.amazonaws.com/policygen.html.
+{
+  "Id": "Policy1705925909651",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1705925907829",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::web-estatica-mjgl2",
+      "Principal": "*"
+    }
+  ]
+}
