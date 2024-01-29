@@ -1,25 +1,39 @@
 html,
 button {
-    background-color: rgb(103, 103, 103);
+    /* background-color: rgb(103, 103, 103); */
 }
 
 .icon-prev {
     rotate: 180deg;
 }
-.progress{
+
+.progress {
     background-color: rgb(198, 198, 198);
     width: 200px;
-    height: 10px;   
+    height: 10px;
 }
+
 .progress-current {
     background-color: blue;
     color: blue;
     height: 10px;
     width: 0%;
 }
-.item{
+
+.item {
     border: 1px solid red;
+    width: 300px;
 }
-.current{
+
+.current {
     border: 1px solid blue;
+    width: 300px;
+    position: absolute;
+    right: 0;
+}
+
+.item-image,
+.current-image {
+    width: 100px;
+    height: 100px;
 }

@@ -2,7 +2,8 @@ import { data } from "./data.js";
 const AudioController = {
     state: {
         audios: [],
-        current: {}
+        current: {},
+        playing: false
     },
     init() {
         this.initVariables();
@@ -12,14 +13,92 @@ const AudioController = {
     initVariables() {
         this.audioList = document.querySelector(".items");
         this.currentItem = document.querySelector(".current");
+        this.playButton = null;
     },
+    /*Events logic*/
     initEvents() {
         this.audioList.addEventListener("click", this.handleItem.bind(this));
+    },
+    handleItem({ target }) {
+        const { id } = target.dataset;
+        if (!id) return;
+        this.setCurrentItem(id);
+    },
+    setCurrentItem(itemId) {
+        const current = this.state.audios.find(({ id }) => id == itemId);
+        if (!current) return;
+        this.pauseCurrentAudio();
+        this.state.current = current;
+        console.log(current);
+        this.currentItem.innerHTML = this.renderCurrentItem(current);
+        this.handlePlayer();
+        this.audioUpdateHandler(current);
+    },
+    /*Add audio logic*/
+    handlePlayer() {
+        const play = document.querySelector(".controls-play");
+        const next = document.querySelector(".controls-next");
+        const prev = document.querySelector(".controls-prev");
+        this.playButton = play;
+        play.addEventListener("click", this.handleAudioPlay.bind(this));
+        next.addEventListener("click", this.handleAudioNext.bind(this));
+        prev.addEventListener("click", this.handleAudioPrev.bind(this));
+    },
+    handleAudioPlay() {
+        const { playing, current } = this.state;
+        const { audio } = current;
+        !playing ? audio.play() : audio.pause();
+        this.state.playing = !playing;
+        this.playButton.classList.toggle("playing", !playing);
+    },
+    handleAudioNext() {
+        const { current } = this.state;
+        const currentItem = document.querySelector(`[data-id="${current.id}"]`);
+
+        const nextSibling = currentItem.nextSibling;
+        if (!nextSibling) {
+            return;
+        }
+        const next = currentItem.nextSibling?.dataset;
+        const first = this.audioList.firstChild?.dataset;
+        const itemId = next?.id || first?.id;
+        console.log(currentItem.nextSibling);
+        if (!itemId) return;
+        this.setCurrentItem(itemId);
+    },
+    handleAudioPrev() {
+
+    },
+    pauseCurrentAudio() {
+        const { current: { audio } } = this.state;
+        if (!audio) return;
+        audio.pause();
+        audio.currentTime = 0;
+    },
+    audioUpdateHandler({ audio }) {
+        const progress = document.querySelector(".progress-current");
+        const timeline = document.querySelector(".timeline-start");
+
+        // audio.play();
+        audio.addEventListener('timeupdate', ({ target }) => {
+            // console.log(target.currentTime);
+            const { currentTime, duration } = target;
+            let min = Math.floor(currentTime / 60);
+            let sec = Math.floor(currentTime % 60);
+            sec < 10 ? sec = "0" + sec : sec;
+
+            const width = currentTime * 100 / duration;
+            timeline.innerHTML = min + ":" + sec;
+            progress.style.width = `${width}%`;
+            console.log("width:", width, "time:", min, ":", sec);
+        });
     },
     renderCurrentItem(item) {
         const { link, img, genre, track, group, year, duration } = item;
         let min = Math.floor(duration / 60);
         let sec = Math.floor(duration % 60);
+        sec < 10 ? sec = "0" + sec : sec;
+
         return `
         <div class="current-image" style="background-image: url(resources/img/${img})"></div>
         <div class="current-info">
@@ -75,27 +154,15 @@ const AudioController = {
                         <div class="progress-current"></div>
                     </div>
                     <div class="timeline">
-                        <span class="time-start">00:00</span>
-                        <span class="time-end">${min}:${sec}</span>
+                        <span class="timeline-start">00:00</span>
+                        <span class="timeline-end">${min}:${sec}</span>
                     </div>
                 </div>
             </div>
         </div>
         `;
     },
-    setCurrentItem(itemId) {
-        const current = this.state.audios.find(({ id }) => id == itemId);
-        if (!current) return;
-        this.state.current = current;
-        console.log(current);
-        this.currentItem.innerHTML = this.renderCurrentItem(current);
-    },
-    handleItem({ target }) {
-        const { id } = target.dataset;
-        if (!id) return;
-        this.setCurrentItem(id);
-        console.log(id);
-    },
+    /*Render audios from data.js*/
     renderAudios() {
         data.forEach((e) => {
             const audio = new Audio(`./resources/audio/${e.link}`);
@@ -103,7 +170,6 @@ const AudioController = {
                 const newItem = { ...e, duration: audio.duration, audio }
                 this.state.audios = [...this.state.audios, newItem];
                 this.loadAudioData(newItem);
-                // console.log(this.state.audios);
             })
         })
     },
@@ -112,6 +178,8 @@ const AudioController = {
         const { id, link, img, genre, track, group, year, duration } = audio;
         let min = Math.floor(duration / 60);
         let sec = Math.floor(duration % 60);
+        sec < 10 ? sec = "0" + sec : sec;
+
         const item = ` <div class="item" data-id="${id}">
                         <div class="item-image" style="background-image: url(resources/img/${img})"></div>
                         <div class="item-titles">
@@ -137,7 +205,6 @@ const AudioController = {
                         </button>
                     </div>`;
         this.audioList.innerHTML += item;
-    }
-
+    },
 }
 AudioController.init();
