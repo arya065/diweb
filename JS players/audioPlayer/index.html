@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>First audio player</title>
+</head>
+
+<body>
+    <div class="root">
+        <h1>music player</h1>
+        <div class="player">
+            <main class="app">
+                <div class="content">
+                    <div class="handling">
+                        <div class="handling-sound" title="play">
+                            <svg class="icon-sound" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M18.3281 12C18.3281 10.3359 17.311 8.91094 15.8672 8.31094L15.0985 10.1578C15.8203 10.4578 16.3266 11.1703 16.3266 12.0047C16.3266 12.8344 15.8203 13.5469 15.0985 13.8516L15.8672 15.6984C17.311 15.0891 18.3281 13.6641 18.3281 12ZM17.4047 4.61719L16.636 6.46406C18.8063 7.36875 20.3297 9.50625 20.3297 12C20.3297 14.4984 18.8063 16.6313 16.636 17.5359L17.4047 19.3828C20.2969 18.1781 22.3266 15.3281 22.3266 12C22.3266 8.67188 20.2969 5.82188 17.4047 4.61719ZM2.32971 6.99844V16.9969H6.32815L13.3266 24V0L6.32815 6.99844H2.32971Z"
+                                    fill="black" />
+                            </svg>
+                            <div class="volume">
+                                <input type="range" name="volume" id="volume" min="0" max="1" step="0.1" value="0.5"
+                                    class="controls-volume">
+                            </div>
+                        </div>
+                        <div class="handling-repeat">
+                            <svg class="icon-repeat" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 22L3 18L7 14L8.4 15.45L6.85 17H17V13H19V19H6.85L8.4 20.55L7 22ZM5 11V5H17.15L15.6 3.45L17 2L21 6L17 10L15.6 8.55L17.15 7H7V11H5Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <!-- <div class="handling-shaffle">
+                            <svg class="icon-shaffle" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7 22L3 18L7 14L8.4 15.45L6.85 17H17V13H19V19H6.85L8.4 20.55L7 22ZM5 11V5H17.15L15.6 3.45L17 2L21 6L17 10L15.6 8.55L17.15 7H7V11H5Z"
+                                    fill="black" />
+                            </svg>
+                        </div> -->
+                        <div class="current"></div>
+
+                        <!-- Here is current class  -->
+                        <div class="list">
+                            <h1 class="last-title">All songs</h1>
+                            <div class="items"><!-- take all items from scripts.js --></div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="scripts/scripts.js" type="module"></script>
+</body>
+
+</html>
