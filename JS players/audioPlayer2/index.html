@@ -10,7 +10,7 @@
 
 <body>
     <div class="player">
-        <audio class="audio" src="resources/audio/song.mp3">
+        <audio class="audio" src="resources/audio/song.mp3" preload="auto">
 
         </audio>
         <div class="controls">
@@ -81,9 +81,24 @@
                 </div>
             </div>
             <div class="time-controls">
-                <div class="current-time"></div>
-                <div class="all-time"></div>
-                <div class="run-line"></div>
+                <div class="current-time">0:00</div>
+                <div class="total-time">0:00</div>
+                <!-- also can add input:range -->
+                <div class="run-line"><div class="current-line"></div></div>
+            </div>
+            <div class="repeat">
+                <button>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 22L3 18L7 14L8.4 15.45L6.85 17H17V13H19V19H6.85L8.4 20.55L7 22ZM5 11V5H17.15L15.6 3.45L17 2L21 6L17 10L15.6 8.55L17.15 7H7V11H5Z" fill="black"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="repeat-off">
+                <button>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.1665 10.9792L6.83317 8.33342L41.6665 43.1667L39.0207 45.8334L32.7707 39.5834H14.5832V45.8334L6.24984 37.5001L14.5832 29.1667V35.4168H28.604L14.5832 21.3959V22.9167H10.4165V17.2292L4.1665 10.9792ZM35.4165 27.0834H39.5832V35.7918L35.4165 31.6251V27.0834ZM35.4165 10.4167V4.16675L43.7498 12.5001L35.4165 20.8334V14.5834H18.3748L14.2082 10.4167H35.4165Z" fill="black"/>
+                    </svg>                        
+                </button>
             </div>
         </div>
     </div>
@@ -92,6 +107,7 @@
     /*local variables*/
     let audio = document.querySelector(".audio");
     let tmpVol = 0.3;
+    let duration = 0;
     initSettings(audio);
     /*buttons*/
     let btn_play = document.querySelector(".play");
@@ -99,13 +115,18 @@
     let btn_mute = document.querySelector(".mute");
     let btn_unmute = document.querySelector(".unmute");
     let btn_volume = document.querySelector(".sound-level>input");
+    let btn_repeat = document.querySelector(".repeat");
+    let btn_unrepeat = document.querySelector(".repeat-off");
     /*events*/
     btn_play.addEventListener("click", () => handlePlay(audio));
     btn_pause.addEventListener("click", () => handlePlay(audio));
     btn_mute.addEventListener("click", () => handleMute(audio, btn_volume));
     btn_unmute.addEventListener("click", () => handleMute(audio, btn_volume));
     btn_volume.addEventListener("change", () => setVolume(audio, btn_volume.value));
-
+    btn_repeat.addEventListener("click", () => handleRepeat(audio));
+    btn_unrepeat.addEventListener("click", () => handleRepeat(audio));
+    audio.addEventListener("timeupdate",()=>changeTimeline(audio));
+    /*functions*/
     function handlePlay(audio) {
         audio.paused ? audio.play() : audio.pause();
     }
@@ -113,11 +134,33 @@
         audio.volume == 0.0 ? (audio.volume = tmpVol, btn_volume.value = tmpVol) : (tmpVol = audio.volume, audio.volume = 0.0, btn_volume.value = 0.0);
     }
     function setVolume(audio, value) {
-        console.log(value);
         audio.volume = value;
+    }
+    function handleRepeat(audio){
+        audio.loop?audio.loop=false:audio.loop=true;
     }
     function initSettings(audio) {
         audio.volume = 0.3;
+        handleRepeat(audio);
+        // set total song time
+        let minT = Math.floor(audio.duration / 60);
+        let secT = Math.floor(audio.duration % 60);
+        secT < 10 ? secT = "0" + secT : secT;
+        let total = document.querySelector(".total-time");
+        total.innerHTML = minT+":"+secT;
+    }
+    function changeTimeline(audio){
+        let minC = Math.floor(audio.currentTime / 60);
+        let secC = Math.floor(audio.currentTime % 60);
+        secC < 10 ? secC = "0" + secC : secC;
+        // set current time
+        let current = document.querySelector(".current-time");
+        current.innerHTML = minC+":"+secC;
+        // set current-line
+        let line = document.querySelector(".current-line");
+        let length = audio.currentTime / audio.duration * 100;
+        console.log(length);
+        line.style.width = length+"%";
     }
 </script>
 

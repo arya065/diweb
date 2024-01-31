@@ -2,9 +2,22 @@ html,
 button {
     background-color: rgb(103, 103, 103);
 }
-
+button svg{
+    height: 24px;
+    width: 24px;
+}
 .prev button svg{
     /* rotate: 180deg; */
     transform: rotate(180deg);
     transform-origin: center;
+}
+.run-line{
+    height: 10px;
+    width: 200px;
+    background-color: aliceblue;
+}
+.current-line{
+    height: 10px;
+    width: 0;
+    background-color: blue;
 }
