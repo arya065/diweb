@@ -1,0 +1,16 @@
+body,
+button {
+    background-color: rgba(52, 50, 54, 1);
+}
+
+/* buttons and svg */
+svg path {
+    fill: black;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+}
+
+/*  */
