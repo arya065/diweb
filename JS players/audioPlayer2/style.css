@@ -2,22 +2,64 @@ html,
 button {
     background-color: rgb(103, 103, 103);
 }
-button svg{
+
+button {
+    border: 1px solid black;
+}
+
+button:focus {
+    border: 1px solid orange;
+}
+
+button svg {
     height: 24px;
     width: 24px;
 }
-.prev button svg{
-    /* rotate: 180deg; */
+
+.prev button svg {
     transform: rotate(180deg);
     transform-origin: center;
 }
-.run-line{
-    height: 10px;
+
+.run-line {
+    height: 30px;
     width: 200px;
     background-color: aliceblue;
 }
-.current-line{
-    height: 10px;
+
+.current-line {
+    height: 30px;
     width: 0;
     background-color: blue;
 }
+
+/* start styles */
+.play,
+.mute,
+.repeat-off {
+    display: none;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid red;
+    width: 400px;
+}
+
+.controls-switch,
+.controls-time {
+    display: flex;
+}
+
+.controls-time {
+    width: 100%;
+    border: 1px solid greenyellow;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .con */
