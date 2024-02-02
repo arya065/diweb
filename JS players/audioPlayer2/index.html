@@ -10,10 +10,10 @@
 
 <body>
     <div class="player">
-        <audio class="audio" src="resources/audio/song.mp3" preload="metadata"></audio>
+        <audio class="audio" src="resources/audio/song2.mp3" preload="metadata"></audio>
         <div class="controls">
             <div class="controls-time">
-                <div class="current-time">0:00</div>
+                <div class="current-time">0:00</div> 
                 <!-- also can add input:range -->
                 <div class="run-line">
                     <div class="current-line"></div>
@@ -88,7 +88,7 @@
                 </div>
             </div>
             <div class="sound-level">
-                <input type="range" name="sound-level" id="sound-level" min="0" max="1" step="0.001" value="0.1">
+                <input type="range" name="sound-level" id="sound-level" min="0" max="1" step="0.001" value="0.3">
             </div>
             <div class="controls-repeat">
                 <div class="repeat">
@@ -124,8 +124,7 @@
     /*local variables*/
     let audio = document.querySelector(".audio");
     audio.onloadedmetadata = () => {
-
-        let tmpVol = 0.3;
+        let tmpVol = 0.0;
         let duration = 0;
         initSettings(audio);
         /*buttons*/
@@ -134,6 +133,7 @@
         let btn_mute = document.querySelector(".mute");
         let btn_unmute = document.querySelector(".unmute");
         let btn_volume = document.querySelector(".sound-level>input");
+        console.log(btn_volume.value);
         let btn_repeat = document.querySelector(".repeat");
         let btn_unrepeat = document.querySelector(".repeat-off");
         /*events*/
@@ -151,7 +151,15 @@
             audio.paused ? (audio.play(), setInvisible(".play", ".pause")) : (audio.pause(), setInvisible(".pause", ".play"));
         }
         function handleMute(audio, btn_volume) {
-            audio.volume == 0.0 ? (audio.volume = tmpVol, btn_volume.value = tmpVol, setInvisible(".unmute", ".mute")) : (tmpVol = audio.volume, audio.volume = 0.0, btn_volume.value = 0.0, setInvisible(".mute", ".unmute"));
+            console.log("prev:");
+            console.log("audio.volume:", audio.volume);
+            console.log("btn.volume:", btn_volume.value);
+            console.log("tmp.volume:", tmpVol);
+            audio.volume == 0.0 ? (audio.volume = tmpVol, btn_volume.value = tmpVol, setInvisible(".unmute", ".mute")) : (tmpVol = btn_volume.value, audio.volume = 0.0, btn_volume.value = 0.0, setInvisible(".mute", ".unmute"));
+            console.log("after:");
+            console.log("audio.volume:", audio.volume);
+            console.log("btn.volume:", btn_volume.value);
+            console.log("tmp.volume:", tmpVol);
         }
         function setVolume(audio, value) {
             audio.volume = value;
@@ -164,6 +172,8 @@
             // set total song time
             let total = document.querySelector(".total-time");
             total.innerHTML = getTime(audio.duration);
+            // set volume
+            tmpVol = document.querySelector(".sound-level>input").value;
         }
         function getTime(time) {
             let min = Math.floor(time / 60);
