@@ -1,5 +1,11 @@
 $(document).ready(function () {
-    $("img").mouseenter(function () {
+    // $("img").mouseenter(function () {
+    //     $(this).next()
+    //         .css("display", "block")
+    //         .stop()
+    //         .animate({ opacity: 1 }, 100);
+    // });
+    $("img").hover(function () {
         $(this).next()
             .css("display", "block")
             .stop()
