@@ -1,9 +1,10 @@
 $(document).ready(function () {
-    $("#icon")
-        .hover(function () {
+    $("#icon").on({
+        "mouseenter": function () {
             $(this).css("color", "red");
-        })
-        .mouseleave(function () {
+        },
+        "mouseleave": function () {
             $(this).css("color", "black");
-        });
+        }
+    });
 });
