@@ -1,0 +1,144 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0%;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+
+header nav#menu-principal {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    height: 50px;
+}
+
+header nav#menu-principal ul#menu {
+    display: none;
+}
+
+header nav#menu-principal div#hamburguesa {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header nav#menu-principal div#hamburguesa span {
+    color: white;
+    height: 25px;
+}
+
+header nav#bloque-iconos {
+    width: 49%;
+    height: 100px;
+}
+
+header nav#bloque-iconos ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin: 0%;
+}
+
+header nav#bloque-iconos ul li a i {
+    color: black;
+    font-size: 50px;
+    margin: 20px;
+}
+
+header picture {
+    width: 49%;
+    height: 100px;
+}
+
+/* open menu */
+header nav#menu-principal:hover ul#menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+header nav#menu-principal:hover {
+    height: 100px;
+}
+
+header nav#menu-principal ul#menu li a {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+}
+
+header nav#menu-principal ul#menu li a:hover {
+    text-decoration: underline;
+}
+
+.submenu,
+.mas {
+    display: none;
+}
+
+/* main */
+main section h2 {
+    text-align: center;
+}
+
+main section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section form label {
+    display: none;
+}
+
+main section form select {
+    background-color: lightgrey;
+}
+
+main section form select,
+main section form input,
+main section form textarea {
+    width: 50%;
+    box-sizing: content-box;
+    /* height: 44px; */
+}
+
+main section form textarea {
+    height: 300px;
+}
+
+main section form * {
+    width: 50%;
+    height: 30px;
+    padding: 5px;
+    margin: 5px;
+}
+
+main section form input:hover,
+main section form textarea:hover,
+main section form select:hover {
+    background-color: black;
+    color: white;
+    outline: 5px solid lightgrey;
+    border-radius: 3px;
+}
+
+main section form input[type=button] {
+    background-color: black;
+    color: white;
+}
+
+main section form input[type=button]:hover {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    display: none;
+}
