@@ -1,10 +1,18 @@
 $(document).ready(function () {
-    $("#icon").on({
+    $("label").on({
         "mouseenter": function () {
-            $(this).css("color", "red");
+            $("label>span").css("background", "red");
         },
         "mouseleave": function () {
-            $(this).css("color", "black");
+            $("label>span").css("background", "white");
+        },
+        "click": function () {
+            $("ul").css({ "display": "block", "transform": "translateX(0px)", "transition": "0.5s" })
+            $("#content").css({ "transform": "translateX(320px)", "transition": "0.5s" })
+        },
+        "dblclick": function () {
+            $("ul").css({ "transform": "translateX(-320px)", "transition": "0.5s" })
+            $("#content").css({ "transform": "translateX(0px)", "transition": "0.5s" })
         }
     });
 });
