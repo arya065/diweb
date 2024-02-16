@@ -15,10 +15,14 @@ $(document).ready(function () {
             "click": function (event) {
                 if ($(e).attr("isOpen") == "false") {
                     $(e).attr("isOpen", true);
-                    $(".texto").eq(i).css("display", "block");
+                    $(".texto").eq(i)
+                    .hide("fast")
+                    // .css("display", "block");
                 } else {
                     $(e).attr("isOpen", false);
-                    $(".texto").eq(i).css("display", "none")
+                    $(".texto").eq(i)
+                    .show("fast")
+                    // .css("display", "none")
                 }
             }
         })
