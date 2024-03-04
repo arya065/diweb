@@ -2,10 +2,13 @@ $(document).ready(function () {
     //ini
     $("#menu")
         .fadeOut(0);
+    $("#menu")
+        .css("z-index", "1")
+    $("#top")//fix header top
+        .css({ "position": "sticky", "top": "0", "width": "100%", "z-index": "5", "background": "white" })
 
     //scroll
     $(window).on('load scroll', function () {
-        // $(window).scrollTop(500);
         if ($(window).scrollTop() >= 240) {
             $("#volverarriba")
                 .stop(true)
@@ -18,7 +21,6 @@ $(document).ready(function () {
         $("#volverarriba").on({
             "click": function () {
                 $(window)
-                    // .animate()
                     .scrollTop(500);
             }
         })
@@ -26,8 +28,6 @@ $(document).ready(function () {
     //menu
     $("#menu-principal>span").on({
         "click": function () {
-            // console.log($("#menu").queue()[0]);
-            // if ($("#menu").css("display") == "none" || ($("#menu").css("opacity") != 1 && $("#menu").queue()[0] != "inprogress")) {
             if ($("#menu").css("display") == "none") {
                 $("#menu")
                     .stop(true)
@@ -44,14 +44,45 @@ $(document).ready(function () {
     $("#menu>*").map((i, e) => {
         $(e).on({
             "click": function () {
-                if ($(e).children("a").children("span").css("rotate") != "180deg") {
-                    $(e).children("a").children("span")
-                        .animate({ rotate: "180deg" })
+                //stop all queries
+                if ($(e).children("a").children("span").queue() == "inprogress") {
+                    $(e).children("a").children("span").stop().animate({ rotate: "0deg" }, 250);
+                    $(e).children("ul").stop().fadeOut(250);
                 } else {
-                    $(e).children("a").children("span")
-                        .animate({ rotate: "0deg" })
+                    //animate arrow and submenu
+                    $("#menu>*").map((i, e) => {
+                        $(e).children("a").children("span")
+                            .animate({ rotate: "0deg" }, 250)
+                        $(e).children("ul")
+                            .fadeOut(250)
+                    })
+                    if ($(e).children("a").children("span").css("rotate") != "180deg") {
+                        $(e).children("a").children("span")
+                            .animate({ rotate: "180deg" }, { duration: 250, queue: false })
+                        $(e).children("ul")
+                            .fadeIn({ duration: 250, queue: false })
+                    } else {
+                        $(e).children("a").children("span")
+                            .animate({ rotate: "0deg" }, 250)
+                        $(e).children("ul")
+                            .fadeOut(250)
+                    }
                 }
             }
         })
     });
+
+    //replace images
+    $("article>a>picture>img").on({
+        "mouseenter": function () {
+            let src = $(this).attr("src");
+            src = src.slice(0, src.length - 4) + "-1.jpg";
+            $(this).attr("src", src);
+        },
+        "mouseleave": function () {
+            let src = $(this).attr("src");
+            src = src.slice(0, src.length - 6) + ".jpg";
+            $(this).attr("src", src);
+        }
+    })
 });
