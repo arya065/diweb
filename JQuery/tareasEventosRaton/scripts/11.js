@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#menu")
         .fadeOut(0);
     $("#menu")
-        .css("z-index", "1")
+        .css("z-index", "2")
     $("#top")//fix header top
         .css({ "position": "sticky", "top": "0", "width": "100%", "z-index": "5", "background": "white" })
 
@@ -32,11 +32,23 @@ $(document).ready(function () {
                 $("#menu")
                     .stop(true)
                     .fadeIn(250);
+                $(".overlay").css("display", "block");
             } else {
                 $("#menu")
                     .stop(true)
-                    .fadeOut(250);
+                    .fadeOut(100);
+                $(".overlay").css("display", "none");
             }
+        }
+    });
+    //darkening
+    $(".overlay").on({
+        "click": function () {
+            $("#menu")
+                .stop(true)
+                .fadeOut(100);
+            $(".overlay")
+                .css("display", "none")
         }
     });
 
