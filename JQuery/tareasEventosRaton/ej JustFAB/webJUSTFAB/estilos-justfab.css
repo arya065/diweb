@@ -220,6 +220,11 @@ main>article.item>p {
 	padding-left: 1rem;
 }
 
+main>article.item>button {
+	order: 10;
+	display: none;
+}
+
 footer {
 	display: flex;
 	flex-flow: row wrap;

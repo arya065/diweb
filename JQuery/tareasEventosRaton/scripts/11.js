@@ -20,8 +20,7 @@ $(document).ready(function () {
         }
         $("#volverarriba").on({
             "click": function () {
-                $(window)
-                    .scrollTop(500);
+                $(window).scrollTop(0);
             }
         })
     });
@@ -95,6 +94,16 @@ $(document).ready(function () {
             let src = $(this).attr("src");
             src = src.slice(0, src.length - 6) + ".jpg";
             $(this).attr("src", src);
+        }
+    })
+    $("article").on({
+        "mouseenter": function () {
+            $(this).children("button")
+                .css("display", "block")
+        },
+        "mouseleave": function () {
+            $(this).children("button")
+                .css("display", "none")
         }
     })
 });
