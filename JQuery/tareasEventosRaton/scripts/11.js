@@ -98,11 +98,11 @@ $(document).ready(function () {
     })
     $("article").on({
         "mouseenter": function () {
-            $(this).children("button")
+            $(this).children("div").children("button")
                 .css("display", "block")
         },
         "mouseleave": function () {
-            $(this).children("button")
+            $(this).children("div").children("button")
                 .css("display", "none")
         }
     })
