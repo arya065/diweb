@@ -9,6 +9,7 @@ body {
 	display: flex;
 	margin: 0;
 	flex-flow: column nowrap;
+	overflow-x: hidden;
 }
 
 /*Estilo para todos los enlaces de la web*/
@@ -330,4 +331,21 @@ header#top>div.overlay {
 	display: none;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider-container {
+	margin: auto;
+}
+
+.slider {
+	width: 90vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	gap: 10px;
+}
+
+.slider-frame>img {
+	width: 220px;
+	height: auto;
 }
