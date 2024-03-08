@@ -346,6 +346,16 @@ header#top>div.overlay {
 }
 
 .slider-frame>img {
-	width: 220px;
+	width: 33vw;
 	height: auto;
+}
+.arrow-prev,.arrow-next{
+	width: fit-content;
+}
+.arrow-prev>svg {
+	rotate: 180deg;
+}
+.controls-slider{
+	display: flex;
+	flex-direction: row;
 }

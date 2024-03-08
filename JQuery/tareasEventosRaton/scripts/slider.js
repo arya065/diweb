@@ -1,16 +1,68 @@
 $(document).ready(function () {
-    var counter = 1;
+    var counter = $(".slider").children("div").length;
     $(".slider").children("div").map((i, e) => {
-        console.log(i);
         $(e)
             .css("order", i)
         $(e).on({
-            "click": function () {
-                $(e).css("order", i + $(".slider").children("div").length)
-                console.log("order", i + $(".slider").children("div").length);
-                counter++;
+            "forward": function (event, value) {
+                if (value == 3) {
+                    $(e)
+                        .animate({ "marginLeft": "-33vw" }, 500)
+                    $(e).promise().done(function () {
+                        $(e)
+                            .animate({ "marginLeft": "0" }, 0)
+                            .css({ "position": "static", "order": value })
+                    })
+                } else {
+                    $(e)
+                        .css("order", value)
+                }
+            },
+            "backward": function (event, value) {
+                if (value == 0) {
+                    $(e)
+                        .animate({ "marginLeft": "-33vw" }, 0)
+                    $(e).promise().done(function () {
+                        $(e)
+                            .animate({ "marginLeft": "0" }, 500)
+                            .css({ "position": "static", "order": value })
+                    })
+                } else {
+                    $(e)
+                        .css("order", value)
+                }
             }
         })
     })
-
+    $(".arrow-next").on({
+        "click": function () {
+            let focus = (counter % 4);
+            $(".slider").children("div").map((i, e) => {
+                if (focus == i) {
+                    $(e).trigger("forward", [3]);
+                } else {
+                    let curr = $(e).css("order");
+                    $(e).trigger("forward", [curr - 1]);
+                }
+            })
+            counter++;
+        }
+    })
+    $(".arrow-prev").on({
+        "click": function () {
+            counter--;
+            if (counter == -1) {
+                counter = 3;
+            }
+            let focus = (counter % 4);
+            $(".slider").children("div").map((i, e) => {
+                if (focus == i) {
+                    $(e).trigger("backward", [0]);
+                } else {
+                    let curr = $(e).css("order");
+                    $(e).trigger("backward", [parseInt(curr) + 1]);
+                }
+            })
+        }
+    })
 })
