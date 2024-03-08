@@ -56,7 +56,7 @@ $(document).ready(function () {
             if (counter == -1) {
                 counter = 3;
             }
-            let focus = (counter %  length);
+            let focus = (counter % length);
             $(".slider").children("div").each((i, e) => {
                 if (focus == i) {
                     $(e).trigger("backward", [0]);
@@ -67,4 +67,13 @@ $(document).ready(function () {
             })
         }
     })
+    /*
+    .queue() == "inprogress"
+    .stop().animate({ rotate: "0deg" }, 250)
+    .fadeIn({ duration: 250, queue: false })
+    .attr("src")
+    .each((i, e) => {
+    .trigger("forward", [3])
+    $(e).promise().done(function () {
+    */
 })
