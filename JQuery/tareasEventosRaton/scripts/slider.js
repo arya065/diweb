@@ -1,10 +1,12 @@
 $(document).ready(function () {
     var counter = $(".slider").children("div").length;
-    $(".slider").children("div").map((i, e) => {
+    var length = $(".slider").children("div").length;
+    $(".slider").children("div").each((i, e) => {
         $(e)
             .css("order", i)
         $(e).on({
             "forward": function (event, value) {
+                console.log(value);
                 if (value == 3) {
                     $(e)
                         .animate({ "marginLeft": "-33vw" }, 500)
@@ -36,8 +38,8 @@ $(document).ready(function () {
     })
     $(".arrow-next").on({
         "click": function () {
-            let focus = (counter % 4);
-            $(".slider").children("div").map((i, e) => {
+            let focus = (counter % length);
+            $(".slider").children("div").each((i, e) => {
                 if (focus == i) {
                     $(e).trigger("forward", [3]);
                 } else {
@@ -54,8 +56,8 @@ $(document).ready(function () {
             if (counter == -1) {
                 counter = 3;
             }
-            let focus = (counter % 4);
-            $(".slider").children("div").map((i, e) => {
+            let focus = (counter %  length);
+            $(".slider").children("div").each((i, e) => {
                 if (focus == i) {
                     $(e).trigger("backward", [0]);
                 } else {
