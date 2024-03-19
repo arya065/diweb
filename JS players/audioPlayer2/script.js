@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let audio = document.querySelector(".audio");
 
     audio.onloadedmetadata = () => {
-        console.log("here", audio);
 
         let tmpVol = 0.0;
         let duration = 0;
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         let btn_mute = document.querySelector(".mute");
         let btn_unmute = document.querySelector(".unmute");
         let btn_volume = document.querySelector(".sound-level>input");
-        console.log(btn_volume.value);
         let btn_repeat = document.querySelector(".repeat");
         let btn_unrepeat = document.querySelector(".repeat-off");
         /*events*/
@@ -49,6 +47,11 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("tmp.volume:", tmpVol);
         }
         function setVolume(audio, value) {
+            if (value == 0) {
+                handleMute(audio, btn_volume);
+            } else if (btn_mute.style.display == "block") {
+                handleMute(audio, btn_volume);
+            }
             audio.volume = value;
         }
         function handleRepeat(audio) {
