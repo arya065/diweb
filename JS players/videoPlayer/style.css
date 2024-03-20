@@ -68,6 +68,15 @@ svg path {
     position: relative;
 }
 
+.controls-play {
+    display: flex;
+    gap: 10px;
+}
+
+.stop-pressed {
+    display: none;
+}
+
 .controls-time {
     width: 400px;
     display: flex;

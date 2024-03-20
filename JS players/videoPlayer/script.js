@@ -32,9 +32,11 @@ document.addEventListener("DOMContentLoaded", function () {
             video.volume == 0.0 ? (video.volume = tmpVol, btn_volume.value = tmpVol, setInvisible(".unmute", ".mute")) : (tmpVol = video.volume, video.volume = 0.0, btn_volume.value = 0.0, setInvisible(".mute", ".unmute"));
         }
         function setVolume(video, value) {
+            console.log("here",value);
             if (value == 0) {
                 handleMute(video, btn_volume);
             } else if (btn_mute.style.display == "block") {
+                tmpVol = value;
                 handleMute(video, btn_volume);
             }
             video.volume = value;
