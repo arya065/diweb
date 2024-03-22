@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn_forward.addEventListener("click", () => forward(video, 10));
         btn_backward.addEventListener("click", () => backward(video, 10));
         btn_stop.addEventListener("click", () => stop(video));
-        // btn_fullscreen.addEventListener("click", () => );
+        btn_fullscreen.addEventListener("click", () => fullScreen());
         /*functions*/
         function handlePlay(video) {
             video.paused ? (video.play(), setInvisible(".play", ".pause")) : (video.pause(), setInvisible(".pause", ".play"));
@@ -96,6 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             handleRepeat(video);
             video.currentTime = 0;
             video.pause();
+        }
+        function fullScreen(){
+            video.requestFullscreen();
         }
     };
 });
