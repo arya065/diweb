@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let video = document.querySelector(".video");
     video.onloadedmetadata = () => {
         let tmpVol = document.querySelector(".sound-level>input").value;
-        let duration = 0;
+        let duration = video.duration;
         initSettings(video);
         /*buttons*/
         let btn_play = document.querySelector(".play");
@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let btn_repeat = document.querySelector(".repeat");
         let btn_unrepeat = document.querySelector(".repeat-off");
         let btn_timeline = document.querySelector(".current-line");
+        let btn_forward = document.querySelector(".forward");
+        let btn_backward = document.querySelector(".backward");
+        let btn_stop = document.querySelector(".stop");
+        let btn_fullscreen = document.querySelector(".controls-screen");
         /*events*/
         btn_play.addEventListener("click", () => handlePlay(video));
         btn_pause.addEventListener("click", () => handlePlay(video));
@@ -24,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         btn_unrepeat.addEventListener("click", () => handleRepeat(video));
         video.addEventListener("timeupdate", () => changeTimeline(video));
         btn_timeline.addEventListener("input", () => handleTimeChange(video, btn_timeline.value));
+        btn_forward.addEventListener("click", () => forward(video, 10));
+        btn_backward.addEventListener("click", () => backward(video, 10));
+        btn_stop.addEventListener("click", () => stop(video));
+        // btn_fullscreen.addEventListener("click", () => );
         /*functions*/
         function handlePlay(video) {
             video.paused ? (video.play(), setInvisible(".play", ".pause")) : (video.pause(), setInvisible(".pause", ".play"));
@@ -32,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             video.volume == 0.0 ? (video.volume = tmpVol, btn_volume.value = tmpVol, setInvisible(".unmute", ".mute")) : (tmpVol = video.volume, video.volume = 0.0, btn_volume.value = 0.0, setInvisible(".mute", ".unmute"));
         }
         function setVolume(video, value) {
-            console.log("here",value);
+            console.log("here", value);
             if (value == 0) {
                 handleMute(video, btn_volume);
             } else if (btn_mute.style.display == "block") {
@@ -76,7 +84,18 @@ document.addEventListener("DOMContentLoaded", function () {
         function handleTimeChange(video, value) {
             video.pause();
             setInvisible(".pause", ".play");
-            video.currentTime = value * 10;
+            video.currentTime = value * duration;
+        }
+        function forward(video, value) {
+            video.currentTime = video.currentTime + value;
+        }
+        function backward(video, value) {
+            video.currentTime = video.currentTime - value;
+        }
+        function stop(video) {
+            handleRepeat(video);
+            video.currentTime = 0;
+            video.pause();
         }
     };
 });
