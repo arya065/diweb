@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     audio.onloadedmetadata = () => {
 
         let tmpVol = 0.0;
-        let duration = 0;
+        let duration = audio.duration;
         initSettings(audio);
         /*buttons*/
         let btn_play = document.querySelector(".play");
@@ -21,6 +21,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let btn_volume = document.querySelector(".sound-level>input");
         let btn_repeat = document.querySelector(".repeat");
         let btn_unrepeat = document.querySelector(".repeat-off");
+        let btn_forward = document.querySelector(".forward");
+        let btn_backward = document.querySelector(".backward");
+        let btn_stop = document.querySelector(".stop");
         /*events*/
         btn_play.addEventListener("click", () => handlePlay(audio));
         btn_pause.addEventListener("click", () => handlePlay(audio));
@@ -31,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function () {
         btn_repeat.addEventListener("click", () => handleRepeat(audio));
         btn_unrepeat.addEventListener("click", () => handleRepeat(audio));
         audio.addEventListener("timeupdate", () => changeTimeline(audio));
+        btn_forward.addEventListener("click", () => forward(audio, 10));
+        btn_backward.addEventListener("click", () => backward(audio, 10));
+        btn_stop.addEventListener("click", () => stop(audio));
         /*functions*/
         function handlePlay(audio) {
             audio.paused ? (audio.play(), setInvisible(".play", ".pause")) : (audio.pause(), setInvisible(".pause", ".play"));
@@ -50,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (value == 0) {
                 handleMute(audio, btn_volume);
             } else if (btn_mute.style.display == "block") {
+                tmpVol = value;
                 handleMute(audio, btn_volume);
             }
             audio.volume = value;
@@ -85,6 +92,17 @@ document.addEventListener("DOMContentLoaded", function () {
             first.style.display = "block";
             let second = document.querySelector(hide);
             second.style.display = "none";
+        }
+        function forward(audio, value) {
+            audio.currentTime = audio.currentTime + value;
+        }
+        function backward(audio, value) {
+            audio.currentTime = audio.currentTime - value;
+        }
+        function stop(audio) {
+            handleRepeat(audio);
+            audio.currentTime = 0;
+            audio.pause();
         }
     };
 });

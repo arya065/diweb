@@ -63,7 +63,9 @@ svg path {
     padding-right: 50px;
     width: 400px;
 }
-
+.controls-play{
+    display: flex;
+}
 .controls-time {
     display: flex;
     align-items: center;
