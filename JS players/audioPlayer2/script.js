@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn_stop.addEventListener("click", () => stop(audio));
         /*functions*/
         function handlePlay(audio) {
-            audio.paused ? (audio.play(), setInvisible(".play", ".pause")) : (audio.pause(), setInvisible(".pause", ".play"));
+            audio.paused ? (audio.play(), setInvisible(".pause", ".play")) : (audio.pause(), setInvisible(".play", ".pause"));
         }
         function handleMute(audio, btn_volume) {
             console.log("prev:");
@@ -102,7 +102,8 @@ document.addEventListener("DOMContentLoaded", function () {
         function stop(audio) {
             handleRepeat(audio);
             audio.currentTime = 0;
-            audio.pause();
+            // audio.pause();
+            handlePlay(audio);
         }
     };
 });

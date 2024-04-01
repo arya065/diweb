@@ -46,7 +46,7 @@ svg path {
 }
 
 /* start styles */
-.play,
+.pause,
 .mute,
 .repeat-off {
     display: none;
