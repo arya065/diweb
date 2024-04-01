@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         btn_fullscreen.addEventListener("click", () => fullScreen());
         /*functions*/
         function handlePlay(video) {
-            video.paused ? (video.play(), setInvisible(".play", ".pause")) : (video.pause(), setInvisible(".pause", ".play"));
+            video.paused ? (video.play(), setInvisible(".pause", ".play")) : (video.pause(), setInvisible(".play", ".pause"));
         }
         function handleMute(video, btn_volume) {
             video.volume == 0.0 ? (video.volume = tmpVol, btn_volume.value = tmpVol, setInvisible(".unmute", ".mute")) : (tmpVol = video.volume, video.volume = 0.0, btn_volume.value = 0.0, setInvisible(".mute", ".unmute"));
@@ -93,11 +93,16 @@ document.addEventListener("DOMContentLoaded", function () {
             video.currentTime = video.currentTime - value;
         }
         function stop(video) {
-            handleRepeat(video);
+            if (video.loop) {
+                video.loop = false;
+                setInvisible(".repeat-off", ".repeat")
+            }
+            if(!video.paused){
+                handlePlay(video);
+            }
             video.currentTime = 0;
-            video.pause();
         }
-        function fullScreen(){
+        function fullScreen() {
             video.requestFullscreen();
         }
     };
