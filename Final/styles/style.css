@@ -114,7 +114,7 @@ main>* {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 0.75rem;
-    outline: 0.0625rem solid red;
+    /* outline: 0.0625rem solid red; */
 }
 
 .recomended-item {
@@ -123,7 +123,7 @@ main>* {
     color: white;
     background-color: #211F23;
     padding: 0.625rem;
-    outline: 0.0625rem solid green;
+    /* outline: 0.0625rem solid green; */
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -185,12 +185,23 @@ footer {
 footer p {
     margin: 0;
     color: white;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+
+.contacts-map-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    border: 1px solid red;
 }
 
 .contacts-info {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    border: 1px solid red;
 }
 
 .tel {
