@@ -180,6 +180,9 @@ main>* {
 footer {
     background-color: #211F23;
     padding: 3.125rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.375rem;
 }
 
 footer p {
@@ -189,21 +192,34 @@ footer p {
     font-weight: 600;
 }
 
+.contacts-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contacts-info>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
 .contacts-map-info {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    border: 1px solid red;
-}
-
-.contacts-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    border: 1px solid red;
 }
 
 .tel {
     color: #FF5E00;
+}
+
+.socialmedia-info {
+    margin: auto;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.6875rem;
 }
