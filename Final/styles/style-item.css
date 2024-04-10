@@ -7,11 +7,9 @@ main {
 .item-basis {
     display: flex;
     flex-direction: row;
-    padding-top: 1.75rem;
-}
-
-.item-basis>* {
-    border: 1px solid green;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .item-basis picture {
@@ -24,14 +22,28 @@ main {
 .item-basis picture img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
-.item-controls p {
+.item-controls {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-controls>div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.item-controls div p {
     font-size: .9375rem;
     margin: 0;
 }
 
-.item-controls>p:nth-child(1) {
+.item-controls div>p:nth-child(1) {
     color: #DBD3C5;
     font-size: 30px;
     font-weight: 600;
@@ -57,10 +69,11 @@ main {
 .item-controls-btn {
     padding-left: 1.875rem;
     padding-right: 1.875rem;
+    align-self: flex-end;
 }
-
 
 .item-slider {
     height: 50px;
+    padding: 1rem;
     border: 1px solid green;
 }
