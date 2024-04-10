@@ -1,0 +1,50 @@
+<script>
+    let strength = 10;
+    let hands = 5;
+    let watermelons = [2, 5, 6, 9, 2, 3, 5, 7, 6, 5, 8, 2, 4, 7, 6, 4, 2, 8, 5, 1, 3, 7, 5];
+    console.log(solution(strength, hands, watermelons));
+
+    function solution(strength, hands, arr) {
+        let counter = 0;
+        arr = sort(arr, strength);
+        if (arr == -1) {
+            return "impossible";
+        }
+
+        while (arr[0]) {
+            let buffer = 0;
+            let cur = 0;
+            let tmp = arr.pop();
+
+            buffer++;
+            cur += tmp;
+
+            while (true) {
+                if (buffer < hands && cur < strength && (cur + arr[0] <= strength)) {
+                    tmp = arr.shift();
+                    buffer++;
+                    cur += tmp;
+                } else {
+                    break;
+                }
+            }
+            counter++;
+        }
+        return counter;
+    }
+
+    function sort(arr, strength) {
+        for (let i = 0; i < arr.length; i++) {
+            let tmp = arr[i];
+            if (tmp > strength) {
+                return -1;
+            }
+            if (tmp > arr[i + 1]) {
+                arr[i] = arr[i + 1];
+                arr[i + 1] = tmp;
+                sort(arr);
+            }
+        }
+        return arr;
+    }
+</script>
