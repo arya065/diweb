@@ -4,21 +4,21 @@ $(document).ready(function () {
         "click": function () {
             $(".shadow-mask").css("display", "block")
             $(".right-menu").css("display", "flex")
-            // $("body").css("overflow", "hidden")
+            $("body").css("overflow", "hidden")
         }
     })
     $(".shadow-mask").on({
         "click": function () {
             $(".shadow-mask").css("display", "none")
             $(".right-menu").css("display", "none")
-            // $("body").css("overflow", "none")
+            $("body").css("overflow", "scroll")
         }
     })
     $(".icon-close").on({
         "click": function () {
             $(".shadow-mask").css("display", "none")
             $(".right-menu").css("display", "none")
-            // $("body").css("overflow", "none")
+            $("body").css("overflow", "scroll")
         }
     })
 
