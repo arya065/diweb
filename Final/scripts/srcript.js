@@ -18,7 +18,10 @@ $(document).ready(function () {
     $(".icon-options").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
-            $(".right-menu").css("display", "flex")
+            $(".right-menu")
+                .fadeIn(200)
+                .css({ "display": "flex" })
+            $(".right-menu").css({ "opacity": "1" })
             $("body").css("overflow", "hidden")
         }
     })
@@ -33,7 +36,8 @@ $(document).ready(function () {
     $(".icon-close").on({
         "click": function () {
             $(".shadow-mask").css("display", "none")
-            $(".right-menu").css("display", "none")
+            $(".right-menu")
+                .fadeOut(200)
             $("body").css("overflow", "scroll")
         }
     })
