@@ -25,8 +25,69 @@ body {
     transition: 0.25s;
 }
 
+h2 {
+    text-align: center;
+    margin: 0;
+    color: #DBD3C5;
+    font-size: 1.875rem;
+    font-weight: 600;
+}
+
+/* input form */
+.form-input-line {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.form-input-line>* {
+    outline: 1px solid red;
+}
+
+.form-input-line>p {
+    margin: 0;
+    font-size: .9375rem;
+}
+
+.form-input-block {
+    position: relative;
+    width: 50%;
+}
+
+.form-input-block svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    rotate: 90deg;
+    height: .9375rem;
+    width: 1rem;
+}
+
+
+select {
+    background-color: #DBD3C5;
+    border: none;
+    border-radius: .625rem;
+    width: 100%;
+}
+
+select:focus {
+    outline: none;
+}
+
+.hover-option {
+    background-color: red;
+}
+
 /* effects */
 .recomended-item:hover {
+    transition: 0.25s;
+    filter: drop-shadow(0rem .25rem .25rem black);
+}
+
+.menu-item:hover {
     transition: 0.25s;
     filter: drop-shadow(0rem .25rem .25rem black);
 }

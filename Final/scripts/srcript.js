@@ -78,8 +78,8 @@ $(document).ready(function () {
     })
     $(".right-menu-options>p:nth-child(2)").on({//booking
         "click": function () {
-            localStorage.setItem('cur', 'menu');
-            window.location.href = 'menu.html';
+            localStorage.setItem('cur', 'booking');
+            window.location.href = 'booking.html';
         }
     })
 })
