@@ -1,21 +1,22 @@
+/* MAIN */
 /* menu screen */
 
 /* pagination*/
-.recomended-container {
+.menu-pagination-block {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
 }
 
-.recomended-container>p {
+.menu-pagination-block>p {
     margin: 0;
     color: #DBD3C5;
     font-size: 1.875rem;
     font-weight: 600;
 }
 
-.recomended-block {
+.pagination-page {
     margin-top: 1rem;
     display: flex;
     flex-direction: row;
@@ -25,7 +26,7 @@
     /* outline: 0.0625rem solid red; */
 }
 
-.recomended-item {
+.menu-item {
     flex: 0 47%;
     border-radius: 1.25rem;
     color: white;
@@ -38,33 +39,33 @@
     transition: 0.25s;
 }
 
-.recomended-item-img {
+.menu-item-img {
     width: auto;
     border-radius: 0.625rem;
     overflow: hidden;
     background-color: #DBD3C5;
 }
 
-.recomended-item-img picture img {
+.menu-item-img picture img {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
 
-.recomended-item-desc {
+.menu-item-desc {
     font-size: 1.25rem;
 }
 
-.recomended-item-desc p {
+.menu-item-desc p {
     margin: 0;
 }
 
-.recomended-item-desc p:nth-child(2) {
+.menu-item-desc p:nth-child(2) {
     font-size: 0.9375rem;
     color: #DBD3C5;
 }
 
-.recomended-item-btn {
+.menu-item-btn {
     font-size: 1.25rem;
     font-weight: 400;
     width: auto;
@@ -73,13 +74,13 @@
 
 /* avoid double line text in the button */
 @media screen and (max-width: 380px) {
-    .recomended-item-btn {
+    .menu-item-btn {
         font-size: 1rem;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .recomended-item-btn {
+    .menu-item-btn {
         font-size: 0.75rem;
     }
 }
