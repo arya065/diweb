@@ -3,16 +3,16 @@ $(document).ready(function () {
     page = page ?? 'home';
     console.log(page);
 
-    if (page == "item") {
-        $("header").css("position", "static")
-        $(".header-logo").css("display", "block")
-    } else if (page == "home") {
-        $("header").css("position", "absolute")
-        $(".header-logo").css("display", "none")
-    } else if (page == "menu") {
-        $("header").css("position", "static")
-        $(".header-logo").css("display", "block")
-    }
+    // if (page == "item") {
+    //     $("header").css("position", "static")
+    //     $(".header-logo").css("display", "block")
+    // } else if (page == "home") {
+    //     $("header").css("position", "absolute")
+    //     $(".header-logo").css("display", "none")
+    // } else if (page == "menu") {
+    //     $("header").css("position", "static")
+    //     $(".header-logo").css("display", "block")
+    // }
 
     // right menu
     $(".icon-options").on({

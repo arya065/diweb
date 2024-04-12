@@ -1,6 +1,24 @@
 /* HEADER */
-header {
+/* header ini */
+.header-ini {
     position: absolute;
+}
+
+.header-ini .header-logo {
+    display: none;
+}
+
+/* heder general */
+.header-general {
+    position: static;
+}
+
+.header-general .header-logo {
+    display: block;
+}
+
+header {
+    /* position: absolute; */
     /* position: static; */
     display: flex;
     flex-direction: row;
@@ -14,9 +32,9 @@ header {
     z-index: 1;
 }
 
-.header-logo {
+/* .header-logo {
     display: none;
-}
+} */
 
 .header-logo picture img {
     width: 14.3rem;
@@ -56,10 +74,6 @@ header {
     top: 4.375rem;
     left: 1rem;
 }
-
-/* .right-menu-options{
-
-} */
 
 .right-menu-options>p:nth-child(3) {
     color: #FF5E00;
