@@ -54,6 +54,8 @@ h2 {
 .form-input-block {
     position: relative;
     width: 50%;
+    border-radius: .625rem;
+    overflow: hidden;
 }
 
 .form-input-block svg {
@@ -65,17 +67,21 @@ h2 {
     width: 1rem;
 }
 
-
-select {
+.form-input-block>* {
     background-color: #DBD3C5;
     border: none;
-    border-radius: .625rem;
     width: 100%;
+    display: flex;
 }
 
-select:focus {
+.form-input-block>*:focus {
     outline: none;
 }
+
+.form-input-block input {
+    padding-left: .5rem;
+}
+
 
 .hover-option {
     background-color: red;
@@ -97,4 +103,9 @@ select:focus {
     transition: 0.25s;
     background-color: #DBD3C5;
     color: #FF5E00;
+}
+
+.input-err-shadow {
+    box-shadow: 0rem 0rem .3125rem .125rem #F36C50;
+    /* filter: drop-shadow(0rem 0rem .3125rem #F36C50); */
 }

@@ -16,6 +16,7 @@
 
 .info-screen>p {
     margin: 0;
+    text-align: center;
 }
 
 .info-screen>p:nth-child(1) {

@@ -39,15 +39,28 @@ $(document).ready(function () {
     $(".item-controls-btn").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
-            $(".info-screen").css("display", "flex")
+            $(".info-screen")
+                .fadeIn(200)
+                .css("display", "flex")
             $("body").css("overflow", "hidden")
         }
     })
     $(".info-screen-btn").on({
         "click": function () {
             $(".shadow-mask").css("display", "none")
-            $(".info-screen").css("display", "none")
+            $(".info-screen")
+                .fadeOut(200)
+            // .css("display", "none")
             $("body").css("overflow", "scroll")
+        }
+    })
+    $(".about-form-btn").on({
+        "click": function () {
+            $(".shadow-mask").css("display", "block")
+            $(".info-screen")
+                .fadeIn(200)
+                .css("display", "flex")
+            $("body").css("overflow", "hidden")
         }
     })
 
@@ -80,6 +93,12 @@ $(document).ready(function () {
         "click": function () {
             localStorage.setItem('cur', 'booking');
             window.location.href = 'booking.html';
+        }
+    })
+    $(".right-menu-options>p:nth-child(3)").on({//about us
+        "click": function () {
+            localStorage.setItem('cur', 'about');
+            window.location.href = 'about.html';
         }
     })
 })

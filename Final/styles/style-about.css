@@ -1,0 +1,40 @@
+.main-about {
+    padding-bottom: 5rem;
+}
+
+.about-info-block {
+    margin-top: 1rem;
+}
+
+.about-info-block>* {
+    margin: 0;
+    margin-top: .25rem;
+    font-size: .9375rem;
+}
+
+.about-info-block-title {
+    font-weight: 600;
+}
+
+.about-info-block-info {
+    color: #FF5E00;
+    font-weight: 400;
+}
+
+.about-info-block>.socialmedia-info {
+    justify-content: left;
+}
+
+/* contact us form */
+.about-form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-form-btn {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: auto;
+}
