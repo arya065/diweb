@@ -101,4 +101,10 @@ $(document).ready(function () {
             window.location.href = 'about.html';
         }
     })
+    $(".icon-order").on({//order view
+        "click": function () {
+            localStorage.setItem('cur', 'order check');
+            window.location.href = 'order-check.html';
+        }
+    })
 })
