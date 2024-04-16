@@ -77,27 +77,32 @@ $(document).ready(function () {
     $(".pay-form-btn").on({
         "click": function () {
             const spinCircle = async () => {
-                return new Promise((resolve, reject) => {
-                    $('.process-circle')
-                        .css("display", "flex")
-                        .animate({ rotate: '360deg' }, 1000, "linear")
-                    setTimeout(() => {
-                        resolve();
-                    }, 1000);
-                });
-            }
-            const spinMultiple = async (rotates) => {
-                $('.main-pay>*').css("display", "none")
-                for (let i = 0; i < rotates; i++) {
-                    await (spinCircle());
-                }
-                $(".shadow-mask-noclick").css("display", "block")
-                $(".info-screen")
-                    .fadeIn(200)
+                $('.process-circle')
                     .css("display", "flex")
-                $("body").css("overflow", "hidden")
+                    .animate({ rotate: '360deg' }, 1000, "swing");
             }
-            spinMultiple(5);
+            const spinMultiple = (el, num) => {
+                const animations = [];
+                for (let i = 0; i < num; i++) {
+                    const animation = new Promise((resolve, reject) => {
+                        el
+                            .css("display", "flex")
+                            .animate({ rotate: '360deg' }, 1000, "swing", () => {
+                                resolve();
+                            });
+                    })
+                    animations.push(animation);
+                }
+                return Promise.all(animations);
+            }
+
+            spinMultiple($('.process-circle'), 5)
+                .then(() => {
+                    console.log("all complete");
+                })
+                .catch((err) => {
+                    console.log("some err");
+                })
         }
     })
     //additional info
