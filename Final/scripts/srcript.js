@@ -50,11 +50,19 @@ $(document).ready(function () {
             $(".shadow-mask").css("display", "none")
             $(".info-screen")
                 .fadeOut(200)
-            // .css("display", "none")
             $("body").css("overflow", "scroll")
         }
     })
     $(".about-form-btn").on({
+        "click": function () {
+            $(".shadow-mask").css("display", "block")
+            $(".info-screen")
+                .fadeIn(200)
+                .css("display", "flex")
+            $("body").css("overflow", "hidden")
+        }
+    })
+    $(".pay-form-btn").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
             $(".info-screen")
@@ -134,6 +142,12 @@ $(document).ready(function () {
         "click": function () {
             localStorage.setItem('cur', 'order check');
             window.location.href = 'order-check.html';
+        }
+    })
+    $(".conifrm-payment").on({//confirm payment and view order details
+        "click": function () {
+            localStorage.setItem('cur', 'order made');
+            window.location.href = 'order-made.html';
         }
     })
 })
