@@ -4,8 +4,10 @@
 @import url("header.css");
 @import url("footer.css");
 @import url("info-screen.css");
+@import url("card.css");
 @import url("style-menu.css");
 @import url("style-book.css");
 @import url("style-about.css");
 @import url("style-order-check.css");
 @import url("style-order-made.css");
+@import url("style-pay-form.css");

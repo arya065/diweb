@@ -1,0 +1,55 @@
+.card-form {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background: rgb(52, 50, 54);
+    background: linear-gradient(135deg, rgba(52, 50, 54, 1) 0%, rgba(229, 229, 229, 1) 50%, rgba(52, 50, 54, 1) 100%);
+    border-radius: .625rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-form>p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.card-input {
+    flex-basis: 40%;
+    margin-top: 1rem;
+}
+
+.card-input>input {
+    /* может стоит такой шрифт взять */
+    font-family: 'Courier New', Courier, monospace;    
+    background-color: white;
+    height: 3.75rem;
+    border: none;
+    border-radius: .625rem;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+.card-input>input:focus {
+    outline: none;
+}
+
+.card-num {
+    flex-basis: 100%;
+}
+
+.supported-bank {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2.25rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}

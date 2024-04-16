@@ -63,6 +63,23 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden")
         }
     })
+    //additional info
+    $('.info-pay-additional-title').on({
+        'click': function () {
+            if ($(".info-pay-additional-content").css("display") == "flex") {
+                $('.info-pay-additional-content')
+                    .fadeOut(200)
+                $('.info-pay-additional-title>svg')
+                    .css({ "transform": "rotate(0deg)" })
+            } else {
+                $('.info-pay-additional-content')
+                    .fadeIn(200)
+                    .css("display", "flex");
+                $('.info-pay-additional-title>svg')
+                    .css({ "transform": "rotate(180deg)" })
+            }
+        }
+    })
 
     // navigation
     $(".header-logo").on({//main page
@@ -102,6 +119,18 @@ $(document).ready(function () {
         }
     })
     $(".icon-order").on({//order view
+        "click": function () {
+            localStorage.setItem('cur', 'order check');
+            window.location.href = 'order-check.html';
+        }
+    })
+    $(".order-form-btn").on({//pay order
+        "click": function () {
+            localStorage.setItem('cur', 'pay form');
+            window.location.href = 'pay-form.html';
+        }
+    })
+    $(".pay-icon-close").on({//back from pay order
         "click": function () {
             localStorage.setItem('cur', 'order check');
             window.location.href = 'order-check.html';

@@ -49,7 +49,6 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    outline: 2px solid green;
 }
 
 .order-form>p {
@@ -61,4 +60,5 @@
     padding-left: 2rem;
     padding-right: 2rem;
     margin: auto;
+    margin-bottom: 2rem;
 }
