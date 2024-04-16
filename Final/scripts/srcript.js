@@ -64,11 +64,17 @@ $(document).ready(function () {
     })
     $(".pay-form-btn").on({
         "click": function () {
-            $(".shadow-mask").css("display", "block")
-            $(".info-screen")
-                .fadeIn(200)
+            let countRounding = 5;
+            $('.main-pay>*').css("display", "none")
+            $('.process-circle')
                 .css("display", "flex")
-            $("body").css("overflow", "hidden")
+                .animate({ rotate: `${countRounding * 360}deg` }, countRounding * 1000, "linear", function () {
+                    $(".shadow-mask-noclick").css("display", "block")
+                    $(".info-screen")
+                        .fadeIn(200)
+                        .css("display", "flex")
+                    $("body").css("overflow", "hidden")
+                })
         }
     })
     //additional info

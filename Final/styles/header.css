@@ -42,7 +42,8 @@ header {
 }
 
 /* right menu */
-.shadow-mask {
+.shadow-mask,
+.shadow-mask-noclick {
     position: fixed;
     z-index: 2;
     top: 0;

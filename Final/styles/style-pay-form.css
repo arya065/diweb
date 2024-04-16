@@ -71,3 +71,18 @@
 .pay-form-btn {
     margin: auto;
 }
+
+.process-circle {
+    display: none;
+    padding: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.5rem;
+    margin-left: -2.5rem;
+}
+
+.process-circle svg {
+    width: 5rem;
+    height: 5rem;
+}
