@@ -35,6 +35,17 @@ $(document).ready(function () {
     $(".slider-container").scroll(function () {
         console.log("slider scroll");
     })
+    // card input
+    $(".card-input>input").on({
+        "focus": function () {
+            $(this).css("box-shadow", "0rem .25rem .25rem .3125rem rgba(0, 0, 0, .5)")
+
+        },
+        "focusout": function () {
+            $(this).css("box-shadow", "none")
+
+        }
+    })
     // info-screen
     $(".item-controls-btn").on({
         "click": function () {
@@ -62,19 +73,31 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden")
         }
     })
+    // delay for pay form
     $(".pay-form-btn").on({
         "click": function () {
-            let countRounding = 5;
-            $('.main-pay>*').css("display", "none")
-            $('.process-circle')
-                .css("display", "flex")
-                .animate({ rotate: `${countRounding * 360}deg` }, countRounding * 1000, "linear", function () {
-                    $(".shadow-mask-noclick").css("display", "block")
-                    $(".info-screen")
-                        .fadeIn(200)
+            const spinCircle = async () => {
+                return new Promise((resolve, reject) => {
+                    $('.process-circle')
                         .css("display", "flex")
-                    $("body").css("overflow", "hidden")
-                })
+                        .animate({ rotate: '360deg' }, 1000, "linear")
+                    setTimeout(() => {
+                        resolve();
+                    }, 1000);
+                });
+            }
+            const spinMultiple = async (rotates) => {
+                $('.main-pay>*').css("display", "none")
+                for (let i = 0; i < rotates; i++) {
+                    await (spinCircle());
+                }
+                $(".shadow-mask-noclick").css("display", "block")
+                $(".info-screen")
+                    .fadeIn(200)
+                    .css("display", "flex")
+                $("body").css("overflow", "hidden")
+            }
+            spinMultiple(5);
         }
     })
     //additional info
