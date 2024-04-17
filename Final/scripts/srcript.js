@@ -73,37 +73,32 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden")
         }
     })
+    
     // delay for pay form
-    /*
-        $(".pay-form-btn").on({
-            "click": function () {
-                $(".main-pay>*").css("display", "none")
-                $('.process-circle').css("display", "flex")
-    
-                $('.process-circle').animate({ rotate: '360deg' }, 1000, "swing");
-                $('.process-circle').animate({ rotate: '360deg' }, 2000, "swing");
-    
-                const spinCircle = () => {
-                    $('.process-circle')
-                        .css("display", "flex")
-                        .animate({ rotate: '360deg' }, 1000, "swing");
+    $(".pay-form-btn").on({
+        "click": function () {
+            const multipleSpins = (spins) => {//set num of rotations and show info-screen
+                for (let i = 1; i <= spins; i++) {
+                    $('.process-circle').queue('spin-circle', function (next) {
+                        $(this).css("display", "flex").animate({ rotate: `${i * 360}deg` }, 1000, "swing", next);
+                    });
                 }
+
+                $('.process-circle').queue('spin-circle', function (next) {
+                    $(".shadow-mask-noclick").css("display", "block")
+                    $(".info-screen")
+                        .fadeIn(200)
+                        .css("display", "flex")
+                    $("body").css("overflow", "hidden")
+                });
+                $('.process-circle').dequeue('spin-circle');
             }
-        })
-        */
-    $(".pay-form-btn").click(function () {
-        $(".main-pay>*").css("display", "none");
-        let elem = $('.process-circle');
-        elem.css("display", "flex");
 
-        // $('.process-circle')
-        //     .animate({ rotate: '360deg' }, 1000);
-        $('.process-circle')
-            .delay("slow")
-            .animate({ rotate: '360deg' }, 2000);
-    });
-
-
+            $(".main-pay>*").css("display", "none")
+            $('.process-circle').css("display", "flex")
+            multipleSpins(3);
+        }
+    })
 
     //additional info
     $('.info-pay-additional-title').on({
