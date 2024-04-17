@@ -74,37 +74,37 @@ $(document).ready(function () {
         }
     })
     // delay for pay form
-    $(".pay-form-btn").on({
-        "click": function () {
-            const spinCircle = async () => {
-                $('.process-circle')
-                    .css("display", "flex")
-                    .animate({ rotate: '360deg' }, 1000, "swing");
-            }
-            const spinMultiple = (el, num) => {
-                const animations = [];
-                for (let i = 0; i < num; i++) {
-                    const animation = new Promise((resolve, reject) => {
-                        el
-                            .css("display", "flex")
-                            .animate({ rotate: '360deg' }, 1000, "swing", () => {
-                                resolve();
-                            });
-                    })
-                    animations.push(animation);
+    /*
+        $(".pay-form-btn").on({
+            "click": function () {
+                $(".main-pay>*").css("display", "none")
+                $('.process-circle').css("display", "flex")
+    
+                $('.process-circle').animate({ rotate: '360deg' }, 1000, "swing");
+                $('.process-circle').animate({ rotate: '360deg' }, 2000, "swing");
+    
+                const spinCircle = () => {
+                    $('.process-circle')
+                        .css("display", "flex")
+                        .animate({ rotate: '360deg' }, 1000, "swing");
                 }
-                return Promise.all(animations);
             }
+        })
+        */
+    $(".pay-form-btn").click(function () {
+        $(".main-pay>*").css("display", "none");
+        let elem = $('.process-circle');
+        elem.css("display", "flex");
 
-            spinMultiple($('.process-circle'), 5)
-                .then(() => {
-                    console.log("all complete");
-                })
-                .catch((err) => {
-                    console.log("some err");
-                })
-        }
-    })
+        // $('.process-circle')
+        //     .animate({ rotate: '360deg' }, 1000);
+        $('.process-circle')
+            .delay("slow")
+            .animate({ rotate: '360deg' }, 2000);
+    });
+
+
+
     //additional info
     $('.info-pay-additional-title').on({
         'click': function () {
