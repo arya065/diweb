@@ -73,7 +73,17 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden")
         }
     })
-    
+    $(".book-form-btn").on({
+        "click": function () {
+            $(".shadow-mask").css("display", "block")
+            $(".info-screen")
+                .fadeIn(200)
+                .css("display", "flex")
+            $("body").css("overflow", "hidden")
+        }
+    })
+
+
     // delay for pay form
     $(".pay-form-btn").on({
         "click": function () {

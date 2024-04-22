@@ -68,6 +68,8 @@ h2 {
     border: none;
     width: 100%;
     display: flex;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
 }
 
 .form-input-block>*:focus {
