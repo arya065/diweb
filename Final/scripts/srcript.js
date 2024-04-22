@@ -162,6 +162,12 @@ $(document).ready(function () {
             window.location.href = 'menu.html';
         }
     })
+    $(".btn-menu").on({//menu from ini-screen
+        "click": function () {
+            localStorage.setItem('cur', 'menu');
+            window.location.href = 'menu.html';
+        }
+    })
     $(".right-menu-options>p:nth-child(2)").on({//booking
         "click": function () {
             localStorage.setItem('cur', 'booking');
