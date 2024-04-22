@@ -39,7 +39,16 @@ $(document).ready(function () {
     $(".card-input>input").on({
         "focus": function () {
             $(this).css("box-shadow", "0rem .25rem .25rem .3125rem rgba(0, 0, 0, .5)")
+        },
+        "focusout": function () {
+            $(this).css("box-shadow", "none")
 
+        }
+    })
+    // form input
+    $(".form-input-block>*").on({
+        "focus": function () {
+            $(this).css("box-shadow", "0rem .25rem .25rem rgba(0, 0, 0, .5)")
         },
         "focusout": function () {
             $(this).css("box-shadow", "none")

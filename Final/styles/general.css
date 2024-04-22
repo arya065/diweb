@@ -51,7 +51,7 @@ h2 {
     position: relative;
     width: 50%;
     border-radius: .625rem;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .form-input-block svg {
@@ -70,16 +70,14 @@ h2 {
     display: flex;
     padding-top: .5rem;
     padding-bottom: .5rem;
+    padding-left: .5rem;
+    border-radius: .625rem;
 }
 
 .form-input-block>*:focus {
     outline: none;
+    transition: .25s;
 }
-
-.form-input-block input {
-    padding-left: .5rem;
-}
-
 
 /* effects */
 .recomended-item:hover {
