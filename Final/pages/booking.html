@@ -11,6 +11,8 @@
     <script src="../scripts/jq/jQueryRotate.js"></script>
     <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"></script>
     <script src="../scripts/srcript.js"></script>
+    <script
+        src="https://www.google.com/recaptcha/enterprise.js?render=6LcKk7spAAAAAEz57PP5IxDi87LrAXLWciv_AECN"></script>
     <title>coffee item</title>
 
 </head>
@@ -69,15 +71,15 @@
         </div>
         <div class="shadow-mask"></div>
     </header>
-    <main class="main-default">
+    <main class="main-book">
         <h2>Book a table</h2>
         <div class="booking-form">
             <div class="form-input-line">
                 <p>Number of persons:</p>
                 <div class="form-input-block">
                     <select name="numPers" id="numPers">
-                        <option class="hover-option" value="1">1</option>
-                        <option class="hover-option" value="2">2</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
@@ -86,15 +88,50 @@
             <div class="form-input-line">
                 <p>Date:</p>
                 <div class="form-input-block">
-                    <select name="date" id="date">
+                    <input type="date">
+                    <!-- <select name="date" id="date">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
+                    </select> -->
+                </div>
+            </div>
+            <div class="form-input-line">
+                <p>Time:</p>
+                <div class="form-input-block">
+                    <select name="date" id="date">
+                        <option value="1">10</option>
+                        <option value="2">11</option>
+                        <option value="3">12</option>
+                        <option value="4">13</option>
+                        <option value="5">14</option>
+                        <option value="6">15</option>
                     </select>
                 </div>
             </div>
+            <div class="form-input-line">
+                <p>Name:</p>
+                <div class="form-input-block">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="form-input-line">
+                <p>Phone number:</p>
+                <div class="form-input-block">
+                    <input type="text">
+                </div>
+            </div>
+            <div class="form-input-line">
+                <p>Email:</p>
+                <div class="form-input-block">
+                    <input type="email">
+                </div>
+            </div>
         </div>
+        <div class="captcha">google captcha</div>
+        <div class="g-recaptcha" data-sitekey="6LcKk7spAAAAAEz57PP5IxDi87LrAXLWciv_AECN"></div>
+        <div class="btn book-form-btn">Book</div>
     </main>
     <footer>
         <div class="contacts-map-info">

@@ -42,10 +42,6 @@ h2 {
     justify-content: space-between;
 }
 
-.form-input-line>* {
-    outline: 1px solid red;
-}
-
 .form-input-line>p {
     margin: 0;
     font-size: .9375rem;

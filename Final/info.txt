@@ -1,0 +1,2 @@
+for aws:
+asignaturas->laboratorio->contenidos (wait for green circle)->press the green circle
