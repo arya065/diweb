@@ -83,10 +83,6 @@ h2 {
 }
 
 
-.hover-option {
-    background-color: red;
-}
-
 /* effects */
 .recomended-item:hover {
     transition: 0.25s;
