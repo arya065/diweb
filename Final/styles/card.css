@@ -55,3 +55,10 @@
     align-items: center;
     gap: 1rem;
 }
+
+.input-card-err-text {
+    padding-top: .3125rem;
+    font-size: .75rem;
+    font-weight: 400;
+    color: red;
+}

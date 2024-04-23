@@ -43,10 +43,15 @@ $(document).ready(function () {
             $(this).css("box-shadow", "0rem .25rem .25rem .3125rem rgba(0, 0, 0, .5)")
         },
         "focusout": function () {
+            if ($(this)[0].value.trim() == 0) {
+                $(this).parent().children("div").text("error text");
+            } else {
+                $(this).parent().children("div").text("");
+            }
             $(this).css("box-shadow", "none")
-
         }
     })
+
     // form input
     $(".form-input-block>*").on({
         "focus": function () {
@@ -59,11 +64,9 @@ $(document).ready(function () {
     })
     $(".form-input-block>*:nth-child(1)").on({
         "focusout": function () {
-            console.log($(this));
             if ($(this)[0].value.trim() == 0) {
                 $(this).css("box-shadow", "0rem 0rem .3125rem .125rem #F36C50");
-                console.log($(this).parent().children());
-                $(this).parent().children("div").text("required or some error idk some more text of error to try");
+                $(this).parent().children("div").text("required or some error");
             } else {
                 $(this).css("box-shadow", "none");
                 $(this).parent().children("div").text("");
