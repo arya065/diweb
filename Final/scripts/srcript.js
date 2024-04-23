@@ -3,7 +3,7 @@ $(document).ready(function () {
     page = page ?? 'home';
     console.log(page);
 
-    // right menu
+    /*right menu*/
     $(".icon-options").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
@@ -35,6 +35,7 @@ $(document).ready(function () {
     $(".slider-container").scroll(function () {
         console.log("slider scroll");
     })
+    /*form*/
     // card input
     $(".card-input>input").on({
         "focus": function () {
@@ -55,6 +56,7 @@ $(document).ready(function () {
 
         }
     })
+
     // info-screen
     $(".item-controls-btn").on({
         "click": function () {
@@ -203,5 +205,20 @@ $(document).ready(function () {
             localStorage.setItem('cur', 'order made');
             window.location.href = 'order-made.html';
         }
+    })
+    /*Google recaptcha*/
+    function handleSubmit(token) {
+        document.getElementById("demo-form").submit();
+    }
+    function handleClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LerGcQpAAAAABLnLKBjQd4d1_h5aUZVa3bxKlcn', { action: 'submit' }).then(function (token) {
+                // Add your logic to submit to your backend server here.
+            });
+        });
+    }
+    $(".g-recaptcha").on({
+        "click": handleClick()
     })
 })

@@ -40,6 +40,9 @@ h2 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
+    position: relative;
+    outline: 1px solid red;
 }
 
 .form-input-line>p {
@@ -90,7 +93,6 @@ h2 {
     filter: drop-shadow(0rem .25rem .25rem black);
 }
 
-/* хз нужно ли делать для кнопок ховер */
 .btn:hover {
     transition: 0.25s;
     background-color: #DBD3C5;
@@ -100,4 +102,17 @@ h2 {
 .input-err-shadow {
     box-shadow: 0rem 0rem .3125rem .125rem #F36C50;
     /* filter: drop-shadow(0rem 0rem .3125rem #F36C50); */
+}
+
+.input-err-text {
+    background-color: initial;
+    padding: 0;
+    /* outline: 1px solid green; */
+}
+
+.input-err-text::before {
+    font-size: .75rem;
+    font-weight: 400;
+    color: #F36C50;
+    content: "required or some error idk some more text of error to try";
 }
