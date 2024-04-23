@@ -3,7 +3,7 @@ $(document).ready(function () {
     page = page ?? 'home';
     console.log(page);
 
-    /*right menu*/
+    /* BURGER MENU */
     $(".icon-options").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
@@ -31,11 +31,12 @@ $(document).ready(function () {
         }
     })
 
-    // scroll slider
+    /* SLIDER */
     $(".slider-container").scroll(function () {
         console.log("slider scroll");
     })
-    /*form*/
+
+    /* FORM */
     // card input
     $(".card-input>input").on({
         "focus": function () {
@@ -56,8 +57,21 @@ $(document).ready(function () {
 
         }
     })
+    $(".form-input-block>*:nth-child(1)").on({
+        "focusout": function () {
+            console.log($(this));
+            if ($(this)[0].value.trim() == 0) {
+                $(this).css("box-shadow", "0rem 0rem .3125rem .125rem #F36C50");
+                console.log($(this).parent().children());
+                $(this).parent().children("div").text("required or some error idk some more text of error to try");
+            } else {
+                $(this).css("box-shadow", "none");
+                $(this).parent().children("div").text("");
+            }
+        }
+    })
 
-    // info-screen
+    /* INFO SCREEN */
     $(".item-controls-btn").on({
         "click": function () {
             $(".shadow-mask").css("display", "block")
@@ -95,7 +109,7 @@ $(document).ready(function () {
     })
 
 
-    // delay for pay form
+    /* PAY FORM LOADING */
     $(".pay-form-btn").on({
         "click": function () {
             const multipleSpins = (spins) => {//set num of rotations and show info-screen
@@ -121,7 +135,7 @@ $(document).ready(function () {
         }
     })
 
-    //additional info
+    /* ADDITIONAL INFO */
     $('.info-pay-additional-title').on({
         'click': function () {
             if ($(".info-pay-additional-content").css("display") == "flex") {
@@ -139,7 +153,7 @@ $(document).ready(function () {
         }
     })
 
-    // navigation
+    /* NAVIGATION */
     $(".header-logo").on({//main page
         "click": function () {
             localStorage.setItem('cur', 'home');
@@ -206,6 +220,7 @@ $(document).ready(function () {
             window.location.href = 'order-made.html';
         }
     })
+
     /*Google recaptcha*/
     function handleSubmit(token) {
         document.getElementById("demo-form").submit();
@@ -218,7 +233,7 @@ $(document).ready(function () {
             });
         });
     }
-    $(".g-recaptcha").on({
-        "click": handleClick()
-    })
+    // $(".g-recaptcha").on({
+    //     "click": handleClick()
+    // })
 })

@@ -42,7 +42,6 @@ h2 {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    outline: 1px solid red;
 }
 
 .form-input-line>p {
@@ -54,7 +53,6 @@ h2 {
     position: relative;
     width: 50%;
     border-radius: .625rem;
-    /* overflow: hidden; */
 }
 
 .form-input-block svg {
@@ -107,12 +105,10 @@ h2 {
 .input-err-text {
     background-color: initial;
     padding: 0;
-    /* outline: 1px solid green; */
 }
 
-.input-err-text::before {
+.input-err-text {
     font-size: .75rem;
     font-weight: 400;
     color: #F36C50;
-    content: "required or some error idk some more text of error to try";
 }

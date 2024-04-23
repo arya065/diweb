@@ -11,9 +11,6 @@
     <script src="../scripts/jq/jQueryRotate.js"></script>
     <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"></script>
     <script src="../scripts/srcript.js"></script>
-    <script
-        src="https://www.google.com/recaptcha/enterprise.js?render=6LcKk7spAAAAAEz57PP5IxDi87LrAXLWciv_AECN"></script>
-
     <title>coffee item</title>
 </head>
 
@@ -147,12 +144,13 @@
                 <p>Name:</p>
                 <div class="form-input-block">
                     <input type="text" placeholder="Enter your name">
+                    <div class="input-err-text"></div>
                 </div>
             </div>
             <div class="form-input-line">
                 <p>Email:</p>
                 <div class="form-input-block">
-                    <input type="email" placeholder="Enter your email" class="input-err-shadow">
+                    <input type="email" placeholder="Enter your email">
                     <div class="input-err-text"></div>
                 </div>
             </div>
@@ -160,10 +158,11 @@
                 <p>Message:</p>
                 <div class="form-input-block">
                     <textarea cols="30" rows="2" placeholder="Enter your message"></textarea>
+                    <div class="input-err-text"></div>
                 </div>
             </div>
             <div class="captcha">google captcha</div>
-            <div class="g-recaptcha" data-sitekey="6LcKk7spAAAAAEz57PP5IxDi87LrAXLWciv_AECN"></div>
+            <!-- <div class="g-recaptcha" data-sitekey="6LcKk7spAAAAAEz57PP5IxDi87LrAXLWciv_AECN"></div> -->
             <div class="btn about-form-btn">Send</div>
         </div>
         <div class="info-screen">
