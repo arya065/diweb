@@ -79,7 +79,7 @@ $(document).ready(function () {
         "click": function () {
             console.log("here");
             $(this)
-                .queue("captcha", function (next) {
+                .queue("captcha", function (next) {//make circle and reduce it
                     $(this).animate({
                         "border-radius": "100%",
                         "height": "-5px",
@@ -88,7 +88,7 @@ $(document).ready(function () {
                         next();
                     })
                 })
-                .queue("captcha", function (next) {
+                .queue("captcha", function (next) {//change border color and expand circle
                     $(this)
                         .css({
                             "outline": "none",
@@ -101,7 +101,7 @@ $(document).ready(function () {
                             next();
                         })
                 })
-                .queue("captcha", function (next) {
+                .queue("captcha", function (next) {//add left border and rotate circle
                     $(this)
                         .css({ "border-left": "3px solid blue" })
                         .animate({
@@ -110,12 +110,12 @@ $(document).ready(function () {
                             next();
                         })
                 })
-                .queue("captcha", function (next) {
+                .queue("captcha", function (next) {//close circle
                     $(".input-captcha-container").delay(500).fadeOut(0, function () {
                         next();
                     })
                 })
-                .queue("captcha", function (next) {
+                .queue("captcha", function (next) {//show check
                     $(".input-captcha-check")
                         // .css("display", "block")
                         .fadeIn(500)
