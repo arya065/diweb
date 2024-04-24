@@ -120,6 +120,8 @@ h2 {
 }
 
 .input-captcha-check {
+    width: 2.5rem;
+    height: 2.5rem;
     display: none;
 }
 

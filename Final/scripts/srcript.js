@@ -84,7 +84,7 @@ $(document).ready(function () {
                         "border-radius": "100%",
                         "height": "-5px",
                         "width": "-5px"
-                    }, 1000, function () {
+                    }, 500, function () {
                         next();
                     })
                 })
@@ -97,26 +97,31 @@ $(document).ready(function () {
                         .animate({
                             "height": "30px",
                             "width": "30px",
-                        }, 1000)
-                    next();
+                        }, 500, function () {
+                            next();
+                        })
                 })
                 .queue("captcha", function (next) {
                     $(this)
                         .css({ "border-left": "3px solid blue" })
+                        .animate({
+                            "rotate": "360deg"
+                        }, 1000, function () {
+                            next();
+                        })
+                })
+                .queue("captcha", function (next) {
+                    $(".input-captcha-container").delay(500).fadeOut(0, function () {
+                        next();
+                    })
+                })
+                .queue("captcha", function (next) {
+                    $(".input-captcha-check")
+                        // .css("display", "block")
+                        .fadeIn(500)
                     next();
                 })
                 .dequeue("captcha")
-
-
-            // $(this).queue('captcha', function (next) {
-            // $(this).animate({ rotate: "90deg" }, 1000, next)
-            // })
-            // $(this).queue('captcha', function (next) {
-            //     $(this).animate({ rotate: "180deg" }, 1000)
-            // })
-            // $(this).dequeue('captcha');
-
-
         }
     })
 
