@@ -80,6 +80,49 @@ h2 {
     transition: .25s;
 }
 
+.captcha {
+    background-color: #D9D9D9;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: .625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.captcha>* {
+    margin: 0;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+}
+
+.input-captcha-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-captcha {
+    width: 2.5rem;
+    height: 2.5rem;
+    outline: 2px solid black;
+    border-radius: .375rem;
+    background-color: white;
+    transition: .25s;
+}
+
+.input-captcha-check {
+    display: none;
+}
+
 /* effects */
 .recomended-item:hover {
     transition: 0.25s;

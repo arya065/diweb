@@ -55,7 +55,7 @@ $(document).ready(function () {
     // form input
     $(".form-input-block>*").on({
         "focus": function () {
-            $(this).css("box-shadow", "0rem .25rem .25rem rgba(0, 0, 0, .5)")
+            $(this).css("box-shadow", "0rem 0rem .25rem .1rem rgba(0, 0, 0, .5)")
         },
         "focusout": function () {
             $(this).css("box-shadow", "none")
@@ -73,6 +73,53 @@ $(document).ready(function () {
             }
         }
     })
+
+    /* CAPTCHA */
+    $(".input-captcha").on({
+        "click": function () {
+            console.log("here");
+            $(this)
+                .queue("captcha", function (next) {
+                    $(this).animate({
+                        "border-radius": "100%",
+                        "height": "-5px",
+                        "width": "-5px"
+                    }, 1000, function () {
+                        next();
+                    })
+                })
+                .queue("captcha", function (next) {
+                    $(this)
+                        .css({
+                            "outline": "none",
+                            "border": "3px solid rgba(0, 0, 255, 0.346)"
+                        })
+                        .animate({
+                            "height": "30px",
+                            "width": "30px",
+                        }, 1000)
+                    next();
+                })
+                .queue("captcha", function (next) {
+                    $(this)
+                        .css({ "border-left": "3px solid blue" })
+                    next();
+                })
+                .dequeue("captcha")
+
+
+            // $(this).queue('captcha', function (next) {
+            // $(this).animate({ rotate: "90deg" }, 1000, next)
+            // })
+            // $(this).queue('captcha', function (next) {
+            //     $(this).animate({ rotate: "180deg" }, 1000)
+            // })
+            // $(this).dequeue('captcha');
+
+
+        }
+    })
+
 
     /* INFO SCREEN */
     $(".item-controls-btn").on({
