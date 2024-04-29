@@ -97,7 +97,7 @@ $(document).ready(function () {
                         .animate({
                             "height": "30px",
                             "width": "30px",
-                        }, 500, function () {
+                        }, 250, function () {
                             next();
                         })
                 })
@@ -105,8 +105,8 @@ $(document).ready(function () {
                     $(this)
                         .css({ "border-left": "3px solid blue" })
                         .animate({
-                            "rotate": "360deg"
-                        }, 1000, function () {
+                            "rotate": "720deg"
+                        }, 2000, function () {
                             next();
                         })
                 })
