@@ -124,7 +124,7 @@ $(document).ready(function () {
                 .dequeue("captcha")
         }
     })
-
+    
 
     /* INFO SCREEN */
     $(".item-controls-btn").on({
