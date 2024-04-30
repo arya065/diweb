@@ -82,8 +82,8 @@ $(document).ready(function () {
                 .queue("captcha", function (next) {//make circle and reduce it
                     $(this).animate({
                         "border-radius": "100%",
-                        "height": "-5px",
-                        "width": "-5px"
+                        "height": "-3px",
+                        "width": "-3px"
                     }, 500, function () {
                         next();
                     })
@@ -273,6 +273,12 @@ $(document).ready(function () {
         "click": function () {
             localStorage.setItem('cur', 'order made');
             window.location.href = 'order-made.html';
+        }
+    })
+    $(".item-slider>picture").on({//item slider
+        "click": function () {
+            localStorage.setItem('cur', 'item');
+            window.location.href = 'item.html';
         }
     })
 
