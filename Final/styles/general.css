@@ -97,7 +97,7 @@ h2 {
 }
 
 /* only for PC */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .captcha:hover {
         box-shadow: 0rem .25rem .25rem .3125rem rgba(0, 0, 0, .5);
     }
