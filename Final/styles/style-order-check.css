@@ -45,6 +45,10 @@
     object-fit: cover;
 }
 
+.order-slider-item .counter {
+    height: 1.25rem;
+}
+
 .order-form {
     display: flex;
     flex-direction: column;
