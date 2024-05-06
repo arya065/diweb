@@ -4,6 +4,7 @@ footer {
     padding: 3.125rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 4.375rem;
 }
 
@@ -31,6 +32,8 @@ footer p {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    max-width: 28.5rem;
+    gap: 5rem;
 }
 
 .tel {

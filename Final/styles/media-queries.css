@@ -3,11 +3,33 @@
     /* css */
 }
 
-
 /* tablet */
 @media screen and (min-width: 768px) {
+
     /* css */
+    main>* {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .recomended-item {
+        flex: 0 32%;
+    }
+
+    .recomended-block .recomended-item:nth-child(3n-1) {
+        margin-right: auto;
+    }
+
+    .slider-container picture {
+        height: 100%;
+        max-height: 18.75rem;
+    }
+
+    .contacts-map-info {
+        gap: 15.625rem;
+    }
 }
+
 @media screen and (max-width: 1024px) {
     /* css */
 }
@@ -16,6 +38,7 @@
 @media screen and (min-width: 1025px) {
     /* css */
 }
+
 @media screen and (max-width: 1440px) {
     /* css */
 }
