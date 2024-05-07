@@ -5,13 +5,17 @@
 
 /* tablet */
 @media screen and (min-width: 768px) {
-
-    /* css */
     main>* {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
     }
 
+    .slider-container picture {
+        height: 100%;
+        max-height: 18.75rem;
+    }
+
+    /* recomended */
     .recomended-item {
         flex: 0 32%;
     }
@@ -20,13 +24,71 @@
         margin-right: auto;
     }
 
-    .slider-container picture {
-        height: 100%;
-        max-height: 18.75rem;
+    /* menu */
+    .menu-item {
+        flex: 0 32%;
     }
 
+    .pagination-page .menu-item:nth-child(3n-1) {
+        margin-right: auto;
+    }
+
+    /* footer */
     .contacts-map-info {
         gap: 15.625rem;
+    }
+
+    /* item */
+    .item-basis>picture {
+        width: 13.75rem;
+        height: 13.75rem;
+    }
+
+    .item-controls {
+        flex-direction: row;
+        height: fit-content;
+    }
+
+    .item-controls>div:nth-child(1) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 11rem;
+    }
+
+    .item-controls>div:nth-child(1)>*:nth-child(1) {
+        margin-bottom: 2rem;
+    }
+
+    .item-controls>div:nth-child(1)>*:nth-child(3) {
+        flex-basis: 45%;
+        margin-left: auto;
+    }
+
+    .item-slider-container {
+        scrollbar-width: thin;
+    }
+
+    /* info screen */
+    .info-screen {
+        height: 60vw;
+    }
+
+    /* padding */
+    .main-order>*,
+    .main-pay,
+    .main-order-made>* {
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+
+    .main-book,
+    .about-form {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .about-form>.captcha {
+        margin: 0;
     }
 }
 
