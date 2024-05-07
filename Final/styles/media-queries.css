@@ -68,13 +68,26 @@
         scrollbar-width: thin;
     }
 
+    .item-basis {
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    .item-additional-info {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        bottom: 0;
+        width: calc(100vw - 3rem - 13.75rem);
+    }
+
     /* info screen */
     .info-screen {
         height: 60vw;
     }
 
     /* padding */
-    .main-order>*,
+    .main-order,
     .main-pay,
     .main-order-made>* {
         padding-left: 4.5rem;

@@ -67,6 +67,10 @@
     align-self: flex-end;
 }
 
+.item-additional-info {
+    display: none;
+}
+
 .item-slider-container {
     height: 16vh;
     width: 100%;
