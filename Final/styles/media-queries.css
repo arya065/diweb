@@ -49,21 +49,6 @@
         height: fit-content;
     }
 
-    .item-controls>div:nth-child(1) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 11rem;
-    }
-
-    .item-controls>div:nth-child(1)>*:nth-child(1) {
-        margin-bottom: 2rem;
-    }
-
-    .item-controls>div:nth-child(1)>*:nth-child(3) {
-        flex-basis: 45%;
-        margin-left: auto;
-    }
-
     .item-slider-container {
         scrollbar-width: thin;
     }
