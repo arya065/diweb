@@ -6,3 +6,11 @@
 .main-order-made h2 {
     color: #FF5E00;
 }
+
+.main-order-made>.info-screen {
+    display: flex;
+}
+
+.header-general>.shadow-mask-noclick {
+    display: block;
+}

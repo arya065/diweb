@@ -157,6 +157,7 @@ h2 {
 .input-err-text {
     background-color: initial;
     padding: 0;
+    padding-top: .5rem;
     font-size: .75rem;
     font-weight: 400;
     color: #F36C50;

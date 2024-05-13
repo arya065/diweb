@@ -44,7 +44,7 @@ $(document).ready(function () {
         },
         "focusout": function () {
             if ($(this)[0].value.trim() == 0) {
-                $(this).parent().children("div").text("error text");
+                $(this).parent().children("div").text("Required field");
             } else {
                 $(this).parent().children("div").text("");
             }
@@ -66,7 +66,7 @@ $(document).ready(function () {
         "focusout": function () {
             if ($(this)[0].value.trim() == 0) {
                 $(this).css("box-shadow", "0rem 0rem .3125rem .125rem #F36C50");
-                $(this).parent().children("div").text("required or some error");
+                $(this).parent().children("div").text("Required field");
             } else {
                 $(this).css("box-shadow", "none");
                 $(this).parent().children("div").text("");
@@ -124,7 +124,7 @@ $(document).ready(function () {
                 .dequeue("captcha")
         }
     })
-    
+
 
     /* INFO SCREEN */
     $(".item-controls-btn").on({
@@ -139,6 +139,7 @@ $(document).ready(function () {
     $(".info-screen-btn").on({
         "click": function () {
             $(".shadow-mask").css("display", "none")
+            $(".shadow-mask-noclick").css("display", "none")
             $(".info-screen")
                 .fadeOut(200)
             $("body").css("overflow", "scroll")
@@ -175,14 +176,18 @@ $(document).ready(function () {
                 }
 
                 $('.process-circle').queue('spin-circle', function (next) {
-                    $(".shadow-mask-noclick").css("display", "block")
-                    $(".info-screen")
-                        .fadeIn(200)
-                        .css("display", "flex")
-                    $("body").css("overflow", "hidden")
+                    localStorage.setItem('cur', 'order made');
+                    window.location.href = 'order-made.html';
+                    // $(".shadow-mask-noclick").css("display", "block")
+                    // $(".info-screen")
+                    //     .fadeIn(200)
+                    //     .css("display", "flex")
+                    // $("body").css("overflow", "hidden")
                 });
                 $('.process-circle').dequeue('spin-circle');
             }
+
+
 
             $(".main-pay>*").css("display", "none")
             $('.process-circle').css("display", "flex")
@@ -269,12 +274,12 @@ $(document).ready(function () {
             window.location.href = 'order-check.html';
         }
     })
-    $(".conifrm-payment").on({//confirm payment and view order details
-        "click": function () {
-            localStorage.setItem('cur', 'order made');
-            window.location.href = 'order-made.html';
-        }
-    })
+    // $(".conifrm-payment").on({//confirm payment and view order details
+    //     "click": function () {
+    //         localStorage.setItem('cur', 'order made');
+    //         window.location.href = 'order-made.html';
+    //     }
+    // })
     $(".item-slider>picture").on({//item slider
         "click": function () {
             localStorage.setItem('cur', 'item');
