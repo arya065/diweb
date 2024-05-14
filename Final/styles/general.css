@@ -33,6 +33,10 @@ h2 {
     font-weight: 600;
 }
 
+.header-desktop {
+    display: none;
+}
+
 /* input form */
 .form-input-line {
     height: fit-content;
