@@ -74,7 +74,8 @@ main>* {
 } */
 
 /* recomended */
-.recomended-container {
+.recomended-container,
+.gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
