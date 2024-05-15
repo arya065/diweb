@@ -194,6 +194,8 @@
         margin: auto;
         margin-top: 1rem;
         margin-bottom: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
         display: flex;
         flex-direction: row;
         max-width: 1032px;
