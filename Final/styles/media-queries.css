@@ -282,7 +282,7 @@
         padding-right: 0;
     }
 
-    .btn {
+    .main-book>.btn {
         width: fit-content;
         padding-left: 2rem;
         padding-right: 2rem;
@@ -291,6 +291,44 @@
     .main-book>.captcha {
         max-width: 22.5rem;
         margin: auto;
+    }
+
+    /* item */
+    .item-additional-info {
+        display: none;
+    }
+
+    .item-slider-container {
+        height: 12.5rem;
+        margin-top: 3rem;
+    }
+
+    .item-basis {
+        max-width: 1032px;
+        width: 100%;
+        padding-top: 4rem;
+    }
+
+    .item-basis>picture {
+        width: 22rem;
+        height: 22rem;
+    }
+    .item-controls{
+        flex-wrap: wrap;
+    }
+    .item-controls>div:nth-child(1)>p {
+        font-size: 1.875rem;
+    }
+
+    .item-description {
+        display: none;
+    }
+
+    .item-description-desktop {
+        display: block;
+        /* flex-basis: 100%; */
+        /* flex-shrink: 1; */
+        flex: 0 10%;
     }
 }
 

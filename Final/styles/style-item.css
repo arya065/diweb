@@ -27,7 +27,7 @@
     justify-content: space-between;
 }
 
-.item-controls>div {
+.item-controls>div:nth-child(1) {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -38,7 +38,7 @@
     margin: 0;
 }
 
-.item-controls div>p:nth-child(1) {
+.item-controls div:nth-child(1)>p:nth-child(1) {
     color: #DBD3C5;
     font-size: 30px;
     font-weight: 600;
@@ -93,4 +93,8 @@
     height: 100%;
     border-radius: 1.25rem;
     margin-right: 1rem;
+}
+
+.item-description-desktop {
+    display: none;
 }
