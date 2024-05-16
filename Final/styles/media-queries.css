@@ -112,14 +112,11 @@
     }
 
     .header-desktop {
-        display: block;
-        width: 100%;
+        width: 90%;
         max-width: 1032px;
         margin: auto;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -211,8 +208,8 @@
 
     .qr picture,
     .qr picture img {
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
     }
 
     .qr>p {
@@ -267,6 +264,33 @@
     /* menu */
     .menu-pagination-block {
         align-items: start;
+    }
+
+    /* booking */
+    .main-book {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .main-book>h2 {
+        text-align: left;
+    }
+
+    .main-book>* {
+        width: 45rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .btn {
+        width: fit-content;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .main-book>.captcha {
+        max-width: 22.5rem;
+        margin: auto;
     }
 }
 
