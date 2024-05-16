@@ -165,4 +165,5 @@ h2 {
     font-size: .75rem;
     font-weight: 400;
     color: #F36C50;
+    user-select: none;
 }

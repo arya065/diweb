@@ -224,6 +224,62 @@
     .footer-desktop>.contacts-info>div>p {
         width: max-content;
     }
+
+    /* about us */
+    .main-about h2 {
+        text-align: left;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .main-about>p::after {
+        content: "Contrary to popular belief, Galactic Ipsum isn't simply random text. It has been the cosmic standard placeholder text since the 22nd century, when a rogue spaceship captain took a cargo of language crystals and encoded them into a celestial language matrix. Contrary to popular belief, Galactic Ipsum isn't simply random text. It has been the cosmic standard placeholder text since the 22nd century, when a rogue spaceship captain took a cargo of language crystals and encoded them into a celestial language matrix.";
+    }
+
+    .main-about>* {
+        margin: 0;
+        margin-left: 20rem;
+        margin-right: 20rem;
+        padding: 0;
+    }
+
+    .main-about>.about-form {
+        max-width: 45rem;
+    }
+
+    .main-about>.about-info-block {
+        margin-top: 1rem;
+    }
+
+    .main-about>.qr {
+        display: block;
+    }
+
+    .main-about>.about-form {
+        margin-top: 2.5rem;
+        padding: 0;
+        position: relative;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1150px) {
+
+    /* css */
+    .main-about>.about-form>.about-form-btn {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .main-about>.about-form>.captcha {
+        max-width: 22.5rem;
+    }
+
+    .main-about>.about-form>.about-form-btn {
+        right: 0;
+    }
 }
 
 @media screen and (max-width: 1440px) {

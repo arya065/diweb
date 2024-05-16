@@ -38,3 +38,7 @@
     padding-right: 1.5rem;
     margin: auto;
 }
+
+.main-about>.qr {
+    display: none;
+}
