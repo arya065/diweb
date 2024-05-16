@@ -98,6 +98,11 @@ header {
     font-weight: 600;
 }
 
+.desktop-options>p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* .item-header {
     position: static;
 }

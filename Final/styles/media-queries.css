@@ -158,16 +158,19 @@
         align-items: start;
     }
 
-    .recomended-block {
+    .recomended-block,
+    .pagination-page {
         gap: 1.5rem;
         justify-content: flex-start;
     }
 
-    .recomended-item {
+    .recomended-item,
+    .menu-item {
         flex: 0 23%;
     }
 
-    .recomended-block .recomended-item:nth-child(3n-1) {
+    .recomended-block .recomended-item:nth-child(3n-1),
+    .pagination-page .menu-item:nth-child(3n-1) {
         margin-right: 0;
     }
 
@@ -261,8 +264,10 @@
         position: relative;
     }
 
-
-
+    /* menu */
+    .menu-pagination-block {
+        align-items: start;
+    }
 }
 
 @media screen and (min-width: 1150px) {
