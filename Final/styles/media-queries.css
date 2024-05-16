@@ -99,12 +99,15 @@
 
     /* css */
     /* header */
-    .header-ini {
+    .header-ini,
+    .header-general {
         position: static;
         padding: 0;
     }
 
-    .header-ini>* {
+    .header-ini>*,
+    .header-general>*,
+    .header-general>.header-logo {
         display: none;
     }
 
@@ -170,6 +173,7 @@
 
     /* gallery */
     .gallery {
+        display: block;
         align-items: start;
         padding-bottom: 3rem;
     }

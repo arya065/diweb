@@ -220,6 +220,12 @@ $(document).ready(function () {
             window.location.href = 'index.html';
         }
     })
+    $(".desktop-logo").on({//main page
+        "click": function () {
+            localStorage.setItem('cur', 'home');
+            window.location.href = 'index.html';
+        }
+    })
     $(".recomended-item").on({//item page
         "click": function () {
             localStorage.setItem('cur', 'item');
@@ -238,6 +244,12 @@ $(document).ready(function () {
             window.location.href = 'menu.html';
         }
     })
+    $(".desktop-options>p:nth-child(1)").on({//menu
+        "click": function () {
+            localStorage.setItem('cur', 'menu');
+            window.location.href = 'menu.html';
+        }
+    })
     $(".btn-menu").on({//menu from ini-screen
         "click": function () {
             localStorage.setItem('cur', 'menu');
@@ -250,7 +262,19 @@ $(document).ready(function () {
             window.location.href = 'booking.html';
         }
     })
+    $(".desktop-options>p:nth-child(2)").on({//booking
+        "click": function () {
+            localStorage.setItem('cur', 'booking');
+            window.location.href = 'booking.html';
+        }
+    })
     $(".right-menu-options>p:nth-child(3)").on({//about us
+        "click": function () {
+            localStorage.setItem('cur', 'about');
+            window.location.href = 'about.html';
+        }
+    })
+    $(".desktop-options>p:nth-child(3)").on({//about us
         "click": function () {
             localStorage.setItem('cur', 'about');
             window.location.href = 'about.html';

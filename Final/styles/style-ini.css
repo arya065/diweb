@@ -157,3 +157,7 @@ main>* {
         font-size: 0.75rem;
     }
 }
+
+.gallery {
+    display: none;
+}
