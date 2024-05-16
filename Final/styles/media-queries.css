@@ -299,23 +299,28 @@
     }
 
     .item-slider-container {
+
         height: 12.5rem;
         margin-top: 3rem;
     }
 
     .item-basis {
         max-width: 1032px;
-        width: 100%;
         padding-top: 4rem;
     }
 
     .item-basis>picture {
-        width: 22rem;
-        height: 22rem;
+        flex-basis: 40%;
+        height: auto;
+        width: auto;
     }
-    .item-controls{
+
+    .item-controls {
+        flex-basis: 40%;
         flex-wrap: wrap;
+        /* height: 100%; */
     }
+
     .item-controls>div:nth-child(1)>p {
         font-size: 1.875rem;
     }
@@ -326,9 +331,7 @@
 
     .item-description-desktop {
         display: block;
-        /* flex-basis: 100%; */
-        /* flex-shrink: 1; */
-        flex: 0 10%;
+        margin-top: 3rem;
     }
 }
 
