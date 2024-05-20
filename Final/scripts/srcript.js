@@ -30,7 +30,14 @@ $(document).ready(function () {
             $("body").css("overflow", "scroll")
         }
     })
-
+    // close when redimension
+    $(window).resize(function () {
+        console.log("here");
+        $(".shadow-mask").css("display", "none")
+        $(".right-menu")
+            .fadeOut(200)
+        $("body").css("overflow", "scroll")
+    })
     /* SLIDER */
     $(".slider-container").scroll(function () {
         console.log("slider scroll");
@@ -311,19 +318,4 @@ $(document).ready(function () {
         }
     })
 
-    /*Google recaptcha*/
-    function handleSubmit(token) {
-        document.getElementById("demo-form").submit();
-    }
-    function handleClick(e) {
-        e.preventDefault();
-        grecaptcha.ready(function () {
-            grecaptcha.execute('6LerGcQpAAAAABLnLKBjQd4d1_h5aUZVa3bxKlcn', { action: 'submit' }).then(function (token) {
-                // Add your logic to submit to your backend server here.
-            });
-        });
-    }
-    // $(".g-recaptcha").on({
-    //     "click": handleClick()
-    // })
 })
