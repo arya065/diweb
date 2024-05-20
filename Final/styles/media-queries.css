@@ -363,8 +363,14 @@
 
     /* pay order */
     .main-order {
-        /* align-items: center; */
-        padding: 0;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        align-items: center;
+    }
+
+    .main-order>* {
+        width: 100%;
+        max-width: 1032px;
     }
 
     .main-order>h2 {
@@ -374,16 +380,9 @@
     }
 
     .order-slider-container {
-        max-width: 1032px;
         margin: 0;
     }
 
-    .main-order {
-        padding-left: 20rem;
-        padding-right: 20rem;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
 
     .order-form {
         padding: 0;
