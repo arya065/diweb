@@ -335,7 +335,7 @@
     }
 
     .info-screen {
-        display: flex;
+        /* display: flex; */
         gap: 1rem;
         width: 15rem;
         padding: 1rem;

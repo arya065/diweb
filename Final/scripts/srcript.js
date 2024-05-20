@@ -134,13 +134,17 @@ $(document).ready(function () {
 
 
     /* INFO SCREEN */
+    let windowWidth = $(window).innerWidth();
+
     $(".item-controls-btn").on({
         "click": function () {
-            $(".shadow-mask").css("display", "block")
+            if (windowWidth < 1024) {
+                $(".shadow-mask").css("display", "block")
+                $("body").css("overflow", "hidden")
+            }
             $(".info-screen")
                 .fadeIn(200)
                 .css("display", "flex")
-            $("body").css("overflow", "hidden")
         }
     })
     $(".info-screen-btn").on({
@@ -154,20 +158,24 @@ $(document).ready(function () {
     })
     $(".about-form-btn").on({
         "click": function () {
-            $(".shadow-mask").css("display", "block")
+            if (windowWidth < 1024) {
+                $(".shadow-mask").css("display", "block")
+                $("body").css("overflow", "hidden")
+            }
             $(".info-screen")
                 .fadeIn(200)
                 .css("display", "flex")
-            $("body").css("overflow", "hidden")
         }
     })
     $(".book-form-btn").on({
         "click": function () {
-            $(".shadow-mask").css("display", "block")
+            if (windowWidth < 1024) {
+                $(".shadow-mask").css("display", "block")
+                $("body").css("overflow", "hidden")
+            }
             $(".info-screen")
                 .fadeIn(200)
                 .css("display", "flex")
-            $("body").css("overflow", "hidden")
         }
     })
     $(".info-screen-close").on({
