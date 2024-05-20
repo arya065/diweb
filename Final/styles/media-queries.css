@@ -107,7 +107,8 @@
 
     .header-ini>*,
     .header-general>*,
-    .header-general>.header-logo {
+    .header-general>.header-logo,
+    .header-pay>* {
         display: none;
     }
 
@@ -177,7 +178,9 @@
         align-items: start;
         padding-bottom: 3rem;
     }
-
+    .gallery h2{
+        text-align: left;
+    }
     .slider-container picture,
     .slider-container picture img {
         max-height: 12.5rem;
@@ -329,38 +332,6 @@
         margin-top: 3rem;
     }
 
-    .info-screen {
-        /* display: flex; */
-        gap: 1rem;
-        width: 15rem;
-        padding: 1rem;
-        height: min-content;
-        border-radius: .625rem;
-        position: absolute;
-        top: 1rem;
-        left: 70%;
-        margin: 0;
-    }
-
-    .info-screen>p {
-        font-size: .9375rem;
-    }
-
-    .info-screen>p:nth-child(1) {
-        font-size: 1.25rem;
-    }
-
-    .info-screen-btn {
-        display: none;
-    }
-
-    .info-screen-close {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-    }
-
     /* pay order */
     .main-order {
         padding-top: 1rem;
@@ -381,6 +352,7 @@
 
     .order-slider-container {
         margin: 0;
+        scrollbar-width: thin;
     }
 
 
@@ -408,6 +380,86 @@
 
     .order-form-btn {
         max-width: 8.75rem;
+    }
+
+    /* main pay */
+    .main-pay {
+        background-color: #343236;
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+        height: fit-content;
+    }
+
+    .main-pay>* {
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 1032px;
+    }
+
+    .pay-form-btn {
+        max-width: fit-content;
+    }
+
+    .process-circle {
+        width: fit-content;
+    }
+
+    /* view order */
+    .header-general>.shadow-mask-noclick {
+        display: none;
+    }
+
+    .main-order-made {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        align-items: center;
+    }
+
+    .main-order-made>* {
+        width: 100%;
+        max-width: 1032px;
+        padding: 0;
+    }
+
+    .main-order-made>h2 {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* info screen */
+    .info-screen {
+        gap: 1rem;
+        width: 15rem;
+        padding: 1rem;
+        height: min-content;
+        border-radius: .625rem;
+        position: absolute;
+        top: 1rem;
+        left: 70%;
+        margin: 0;
+    }
+    .info-screen>* {
+        user-select: none;
+    }
+    .info-screen>p {
+        font-size: .9375rem;
+    }
+
+    .info-screen>p:nth-child(1) {
+        font-size: 1.25rem;
+    }
+
+    .info-screen-btn {
+        display: none;
+    }
+
+    .info-screen-close {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
