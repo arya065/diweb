@@ -333,6 +333,30 @@
         display: block;
         margin-top: 3rem;
     }
+
+    .info-screen {
+        display: flex;
+        gap: 1rem;
+        width: 15rem;
+        padding: 1rem;
+        height: min-content;
+        border-radius: .625rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .info-screen>p {
+        font-size: .9375rem;
+    }
+
+    .info-screen>p:nth-child(1) {
+        font-size: 1.25rem;
+    }
+
+    .info-screen-btn {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1150px) {
