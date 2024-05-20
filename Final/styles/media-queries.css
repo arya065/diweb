@@ -267,11 +267,6 @@
     }
 
     /* booking */
-    .main-book {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
     .main-book>h2 {
         text-align: left;
     }
