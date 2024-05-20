@@ -35,3 +35,7 @@
     padding-left: 3.125rem;
     padding-right: 3.125rem;
 }
+
+.info-screen-close {
+    display: none;
+}

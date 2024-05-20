@@ -170,7 +170,11 @@ $(document).ready(function () {
             $("body").css("overflow", "hidden")
         }
     })
-
+    $(".info-screen-close").on({
+        "click": function () {
+            $(".info-screen").fadeOut(200)
+        }
+    })
 
     /* PAY FORM LOADING */
     $(".pay-form-btn").on({

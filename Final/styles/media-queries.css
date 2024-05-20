@@ -342,8 +342,9 @@
         height: min-content;
         border-radius: .625rem;
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 1rem;
+        left: 70%;
+        margin: 0;
     }
 
     .info-screen>p {
@@ -356,6 +357,13 @@
 
     .info-screen-btn {
         display: none;
+    }
+
+    .info-screen-close {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
 
