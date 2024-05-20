@@ -55,6 +55,7 @@
     justify-content: center;
     gap: 1rem;
     overflow: hidden;
+    user-select: none;
 }
 
 .counter svg:hover {

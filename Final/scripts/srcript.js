@@ -330,4 +330,22 @@ $(document).ready(function () {
         }
     })
 
+    /* counter*/
+    $(".counter>svg:nth-child(1)").on({
+        "click": function () {
+            let prev = parseInt($(this).parent().children("p")[0].innerHTML);
+            if (prev > 1) {
+                let cur = prev - 1;
+                $(this).parent().children("p").html(cur);
+            }
+        }
+    })
+    $(".counter>svg:nth-child(3)").on({
+        "click": function () {
+            let prev = parseInt($(this).parent().children("p")[0].innerHTML);
+            let cur = prev + 1;
+            $(this).parent().children("p").html(cur);
+        }
+    })
+
 })

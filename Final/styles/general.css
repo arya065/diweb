@@ -23,6 +23,7 @@ body {
     justify-content: center;
     font-size: 1.875rem;
     transition: 0.25s;
+    user-select: none;
 }
 
 h2 {
