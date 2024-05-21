@@ -23,7 +23,6 @@
 }
 
 .card-input>input {
-    /* может стоит такой шрифт взять */
     font-family: 'Courier New', Courier, monospace;
     background-color: white;
     height: 3.75rem;

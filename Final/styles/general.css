@@ -156,7 +156,6 @@ h2 {
 
 .input-err-shadow {
     box-shadow: 0rem 0rem .3125rem .125rem #F36C50;
-    /* filter: drop-shadow(0rem 0rem .3125rem #F36C50); */
 }
 
 .input-err-text {
