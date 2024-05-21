@@ -37,6 +37,7 @@ main>* {
 }
 
 .slider-container {
+    border: 1px solid green;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -48,30 +49,31 @@ main>* {
     display: none;
 }
 
-.slider {
-    width: max-content;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 1.875rem;
-    justify-content: space-between;
-    align-items: center;
+.viewport {
+    border: 1px solid red;
+    /* overflow: hidden; */
+    margin: auto;
+    width: 600px;
+    position: relative;
 }
 
-.slider-container picture {
-    height: 100%;
+.slider {
+    display: inline-flex;
+    justify-content: space-around;
+    /* change for num of elem */
+    width: calc(100% * 5);
+    border: 1px solid blue;
+}
+
+
+.slider-container picture,
+.slider-container img {
     max-height: 12.5rem;
 }
 
 .slider-container picture img {
-    width: auto;
-    height: 100%;
     border-radius: .625rem;
 }
-
-/* .btn-menu {
-    margin-top: auto;
-} */
 
 /* recomended */
 .recomended-container,

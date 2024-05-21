@@ -177,13 +177,16 @@
         display: block;
         align-items: start;
         padding-bottom: 3rem;
+        width: 100%;
     }
-    .gallery h2{
+
+    .gallery h2 {
         text-align: left;
     }
+
     .slider-container picture,
     .slider-container picture img {
-        max-height: 12.5rem;
+        max-height: 18.75rem;
     }
 
     /* footer */
@@ -440,9 +443,11 @@
         left: 70%;
         margin: 0;
     }
+
     .info-screen>* {
         user-select: none;
     }
+
     .info-screen>p {
         font-size: .9375rem;
     }

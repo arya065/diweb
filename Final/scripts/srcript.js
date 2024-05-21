@@ -38,11 +38,6 @@ $(document).ready(function () {
             .fadeOut(200)
         $("body").css("overflow", "scroll")
     })
-    /* SLIDER */
-    $(".slider-container").scroll(function () {
-        console.log("slider scroll");
-    })
-
     /* FORM */
     // card input
     $(".card-input>input").on({
@@ -348,4 +343,39 @@ $(document).ready(function () {
         }
     })
 
+
+    /* SLIDER */
+    $(".slider-container").scroll(function () {
+        console.log("slider mobile scroll");
+    })
+
+
+
+    {/* <div class="slider-container"> */ }
+    {/* <div class="viewport"> */ }
+    {/* <div class="slider"> */ }
+
+    // slider
+    var slideNow = 1;
+    var slideCount = $(".slider").children().length;
+    var translateWidth = 0;
+
+    console.log("here", slideCount);
+    function nextSlide() {
+        if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+            $('.slidewrapper').css('transform', 'translate(0, 0)');//проверить
+            slideNow = 1;
+        } else {
+            translateWidth = -$('.viewport').width() * (slideNow);
+            console.log('transform', 'translate(' + translateWidth + 'px, 0)');
+            $('.slidewrapper').css({
+                'transform': 'translate(' + translateWidth + 'px, 0)',
+                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
+                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
+            });
+            slideNow++;
+        }
+    }
+    // setInterval(nextSlide, 2000);
+    nextSlide();
 })
