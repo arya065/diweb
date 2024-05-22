@@ -43,6 +43,8 @@ main>* {
     overflow-y: hidden;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
 }
 
 .slider-container::-webkit-scrollbar {
@@ -51,7 +53,7 @@ main>* {
 
 .viewport {
     border: 1px solid red;
-    /* overflow: hidden; */
+    overflow: hidden;
     margin: auto;
     width: 600px;
     position: relative;
@@ -75,6 +77,9 @@ main>* {
     border-radius: .625rem;
 }
 
+.slider-container .slider-prev{
+    rotate: 180deg;
+}
 /* recomended */
 .recomended-container,
 .gallery {

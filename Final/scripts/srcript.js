@@ -32,7 +32,6 @@ $(document).ready(function () {
     })
     // close when redimension
     $(window).resize(function () {
-        console.log("here");
         $(".shadow-mask").css("display", "none")
         $(".right-menu")
             .fadeOut(200)
@@ -357,18 +356,33 @@ $(document).ready(function () {
 
     // slider
     var slideNow = 1;
-    var slideCount = $(".slider").children().length;
+    var slideCount = $(".viewport").children().children().length;
     var translateWidth = 0;
 
-    console.log("here", slideCount);
     function nextSlide() {
         if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-            $('.slidewrapper').css('transform', 'translate(0, 0)');//проверить
+            $('.slider').css('transform', 'translate(0, 0)');//проверить
             slideNow = 1;
         } else {
             translateWidth = -$('.viewport').width() * (slideNow);
-            console.log('transform', 'translate(' + translateWidth + 'px, 0)');
-            $('.slidewrapper').css({
+            // console.log('transform', 'translate(' + translateWidth + 'px, 0)');
+            $('.slider').css({
+                'transform': 'translate(' + translateWidth + 'px, 0)',
+                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
+                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
+            });
+            slideNow++;
+        }
+    }
+    
+    function prevSlide() {
+        if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
+            $('.slider').css('transform', 'translate(0, 0)');//проверить
+            slideNow = 1;
+        } else {
+            translateWidth = $('.viewport').width() * (slideNow);
+            // console.log('transform', 'translate(' + translateWidth + 'px, 0)');
+            $('.slider').css({
                 'transform': 'translate(' + translateWidth + 'px, 0)',
                 '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
                 '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
@@ -377,5 +391,14 @@ $(document).ready(function () {
         }
     }
     // setInterval(nextSlide, 2000);
-    nextSlide();
+    $(".slider-prev").on({
+        "click": function () {
+            prevSlide();
+        }
+    })
+    $(".slider-next").on({
+        "click": function () {
+            nextSlide();
+        }
+    })
 })
