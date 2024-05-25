@@ -37,7 +37,6 @@ main>* {
 }
 
 .slider-container {
-    border: 1px solid green;
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -52,7 +51,6 @@ main>* {
 }
 
 .viewport {
-    border: 1px solid red;
     overflow: hidden;
     margin: auto;
     width: 600px;
@@ -63,8 +61,8 @@ main>* {
     display: inline-flex;
     justify-content: space-around;
     /* change for num of elem */
-    width: calc(100% * 5);
-    border: 1px solid blue;
+    gap: 4rem;
+    position: relative;
 }
 
 

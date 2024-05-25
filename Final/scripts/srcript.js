@@ -329,16 +329,14 @@ $(document).ready(function () {
         "click": function () {
             let prev = parseInt($(this).parent().children("p")[0].innerHTML);
             if (prev > 1) {
-                let cur = prev - 1;
-                $(this).parent().children("p").html(cur);
+                $(this).parent().children("p").html(prev - 1);
             }
         }
     })
     $(".counter>svg:nth-child(3)").on({
         "click": function () {
             let prev = parseInt($(this).parent().children("p")[0].innerHTML);
-            let cur = prev + 1;
-            $(this).parent().children("p").html(cur);
+            $(this).parent().children("p").html(prev + 1);
         }
     })
 
@@ -348,57 +346,53 @@ $(document).ready(function () {
         console.log("slider mobile scroll");
     })
 
-
-
-    {/* <div class="slider-container"> */ }
-    {/* <div class="viewport"> */ }
-    {/* <div class="slider"> */ }
-
-    // slider
-    var slideNow = 1;
-    var slideCount = $(".viewport").children().children().length;
-    var translateWidth = 0;
+    // Gallery
+    $(".viewport>.slider").css({ "width": "calc(100% * 5)" });
+    var curEl = 1;
+    var totalEl = $(".viewport").children().children().length;
+    var viewportWidth = $('.viewport').width() + 64;
 
     function nextSlide() {
-        if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-            $('.slider').css('transform', 'translate(0, 0)');//проверить
-            slideNow = 1;
+        if (curEl < totalEl) {
+            $(".viewport>.slider")
+                .animate({
+                    "left": `-=${viewportWidth}px`
+                }, 500)
+            curEl++;
         } else {
-            translateWidth = -$('.viewport').width() * (slideNow);
-            // console.log('transform', 'translate(' + translateWidth + 'px, 0)');
-            $('.slider').css({
-                'transform': 'translate(' + translateWidth + 'px, 0)',
-                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            });
-            slideNow++;
+            $(".viewport>.slider")
+                .animate({
+                    "left": `0px`
+                }, 500)
+            curEl = 1;
         }
     }
-    
     function prevSlide() {
-        if (slideNow == slideCount || slideNow <= 0 || slideNow > slideCount) {
-            $('.slider').css('transform', 'translate(0, 0)');//проверить
-            slideNow = 1;
+        if (curEl == 1) {
+            $(".viewport>.slider")
+                .animate({
+                    "left": `-${viewportWidth * (totalEl - 1)}px`
+                }, 500)
+            curEl = totalEl;
         } else {
-            translateWidth = $('.viewport').width() * (slideNow);
-            // console.log('transform', 'translate(' + translateWidth + 'px, 0)');
-            $('.slider').css({
-                'transform': 'translate(' + translateWidth + 'px, 0)',
-                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-            });
-            slideNow++;
+            $(".viewport>.slider")
+                .animate({
+                    "left": `+=${viewportWidth}px`
+                }, 500)
+            curEl--;
         }
     }
-    // setInterval(nextSlide, 2000);
-    $(".slider-prev").on({
-        "click": function () {
-            prevSlide();
-        }
-    })
+
+    // setInterval(nextSlide, 3000);
+
     $(".slider-next").on({
         "click": function () {
             nextSlide();
+        }
+    })
+    $(".slider-prev").on({
+        "click": function () {
+            prevSlide();
         }
     })
 })
