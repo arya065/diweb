@@ -38,8 +38,8 @@ main>* {
 
 .slider-container {
     width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
+    /* overflow-x: auto;
+    overflow-y: hidden; */
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: inline-flex;
@@ -60,14 +60,22 @@ main>* {
 .slider {
     display: inline-flex;
     justify-content: space-around;
-    /* change for num of elem */
     gap: 4rem;
     position: relative;
 }
 
+.viewport>.slider {
+    gap: 0;
+}
+
+.viewport>.slider>picture,
+.viewport>.slider>img {
+    margin-right: 4rem;
+}
 
 .slider-container picture,
 .slider-container img {
+    max-width: calc(600px - 4rem);
     max-height: 12.5rem;
 }
 
@@ -75,9 +83,10 @@ main>* {
     border-radius: .625rem;
 }
 
-.slider-container .slider-prev{
+.slider-container .slider-prev {
     rotate: 180deg;
 }
+
 /* recomended */
 .recomended-container,
 .gallery {

@@ -334,7 +334,9 @@
         display: block;
         margin-top: 3rem;
     }
-
+    .item-controls .item-description-desktop>p{
+        font-size: 1rem;
+    }
     /* pay order */
     .main-order {
         padding-top: 1rem;

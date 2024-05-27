@@ -350,7 +350,7 @@ $(document).ready(function () {
     $(".viewport>.slider").css({ "width": "calc(100% * 5)" });
     var curEl = 1;
     var totalEl = $(".viewport").children().children().length;
-    var viewportWidth = $('.viewport').width() + 64;
+    var viewportWidth = $('.viewport').width();
 
     function nextSlide() {
         if (curEl < totalEl) {
