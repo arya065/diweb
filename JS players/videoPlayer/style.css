@@ -41,7 +41,7 @@ button svg {
 }
 
 svg path {
-    fill: #FF5E00;
+    fill: #C24700;
 }
 
 .prev button svg {
@@ -93,7 +93,7 @@ svg path {
 
 .current-line {
     width: 100%;
-    background-color: #FF5E00;
+    background-color: #C24700;
     border-radius: 2px;
     transition: 0.25s linear;
     margin: 0;
@@ -111,7 +111,7 @@ svg path {
 .video-time input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background-color: #FF5E00;
+    background-color: #C24700;
     height: 8px;
     width: 8px;
     border-radius: 8px;
@@ -165,7 +165,7 @@ svg path {
 .sound-level input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    background-color: #FF5E00;
+    background-color: #C24700;
     height: 16px;
     width: 16px;
     border-radius: 16px;

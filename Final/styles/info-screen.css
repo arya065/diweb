@@ -22,7 +22,7 @@
 .info-screen>p:nth-child(1) {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #FF5E00;
+    color: #C24700;
 }
 
 @media screen and (max-width: 370px) {

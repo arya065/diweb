@@ -16,7 +16,7 @@ body {
     height: 2.5rem;
     padding-left: 0.625rem;
     padding-right: 0.625rem;
-    background-color: #FF5E00;
+    background-color: #C24700;
     border-radius: 0.625rem;
     display: flex;
     align-items: center;
@@ -151,7 +151,7 @@ h2 {
 .btn:hover {
     transition: 0.25s;
     background-color: #DBD3C5;
-    color: #FF5E00;
+    color: #C24700;
 }
 
 .input-err-shadow {
