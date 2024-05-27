@@ -11,6 +11,7 @@
     <script src="../scripts/jq/jQueryRotate.js"></script>
     <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"></script>
     <script src="../scripts/srcript.js"></script>
+    <script src="../scripts/player.js"></script>
     <title>coffee</title>
 </head>
 
@@ -262,6 +263,154 @@
                 <div class="slider-next">
                     <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.5 2.5L14 6.25L32.5 25L14 43.75L17.5 47.5L40 25L17.5 2.5Z" fill="#DBD3C5" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="vid-player" id="drag">
+            <div class="player">
+                <video class="video" preload="metadata">
+                    <source src="../resources/videos/vid_anim.mp4" type="video/mp4">
+                    <source src="../resources/videos/vid_anim.webm" type="video/webm">
+                </video>
+                <div class="controls">
+                    <div class="controls-time">
+                        <div class="current-time">0:00</div>
+                        <div class="total-time">0:00</div>
+                        <div class="video-time">
+                            <input class="current-line" type="range" name="current-line" id="current-line" min="0.0"
+                                max="1" step="0.001" value="0">
+                        </div>
+                    </div>
+                    <div class="controls-play">
+                        <div class="play">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2817_741)">
+                                        <path
+                                            d="M6 4.00004V20C5.99995 20.178 6.04737 20.3527 6.13738 20.5062C6.22739 20.6597 6.35672 20.7864 6.51202 20.8732C6.66733 20.96 6.84299 21.0038 7.02088 21.0001C7.19878 20.9964 7.37245 20.9453 7.524 20.852L20.524 12.852C20.6696 12.7626 20.7898 12.6373 20.8733 12.4881C20.9567 12.339 21.0005 12.1709 21.0005 12C21.0005 11.8291 20.9567 11.6611 20.8733 11.512C20.7898 11.3628 20.6696 11.2375 20.524 11.148L7.524 3.14804C7.37245 3.0548 7.19878 3.00369 7.02088 2.99997C6.84299 2.99626 6.66733 3.04007 6.51202 3.1269C6.35672 3.21372 6.22739 3.34042 6.13738 3.4939C6.04737 3.64739 5.99995 3.82211 6 4.00004Z"
+                                            fill="black" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2817_741">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="pause">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2 6C2 4.114 2 3.172 2.586 2.586C3.172 2 4.114 2 6 2C7.886 2 8.828 2 9.414 2.586C10 3.172 10 4.114 10 6V18C10 19.886 10 20.828 9.414 21.414C8.828 22 7.886 22 6 22C4.114 22 3.172 22 2.586 21.414C2 20.828 2 19.886 2 18V6ZM14 6C14 4.114 14 3.172 14.586 2.586C15.172 2 16.114 2 18 2C19.886 2 20.828 2 21.414 2.586C22 3.172 22 4.114 22 6V18C22 19.886 22 20.828 21.414 21.414C20.828 22 19.886 22 18 22C16.114 22 15.172 22 14.586 21.414C14 20.828 14 19.886 14 18V6Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="stop">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 24V0H24V24H0ZM4 20H20V4H4V20Z" fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="backward">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"
+                                    class="reverse">
+                                    <path
+                                        d="M480-80q75 0 140.5-28.5t114-77q48.5-48.5 77-114T840-440q0-75-28.5-140.5t-77-114q-48.5-48.5-114-77T480-800h-6l62-62-56-58-160 160 160 160 56-58-62-62h6q117 0 198.5 81.5T760-440q0 117-81.5 198.5T480-160q-117 0-198.5-81.5T200-440h-80q0 75 28.5 140.5t77 114q48.5 48.5 114 77T480-80Z" />
+                                    <text x="450" y="-400" font-size="300" fill="#C24700" text-anchor="middle"
+                                        dominant-baseline="middle">10</text>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="forward">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                    <path
+                                        d="M480-80q-75 0-140.5-28.5t-114-77q-48.5-48.5-77-114T120-440q0-75 28.5-140.5t77-114q48.5-48.5 114-77T480-800h6l-62-62 56-58 160 160-160 160-56-58 62-62h-6q-117 0-198.5 81.5T200-440q0 117 81.5 198.5T480-160q117 0 198.5-81.5T760-440h80q0 75-28.5 140.5t-77 114q-48.5 48.5-114 77T480-80Z" />
+                                    <text x="450" y="-400" font-size="300" fill="#C24700" text-anchor="middle"
+                                        dominant-baseline="middle">10</text>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="controls-sound">
+                        <div class="mute">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.4 16L14 14.6L16.6 12L14 9.4L15.4 8L18 10.6L20.6 8L22 9.4L19.4 12L22 14.6L20.6 16L18 13.4L15.4 16ZM3 15V9H7L12 4V20L7 15H3Z"
+                                        fill="#C24700" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="unmute">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.3281 12C18.3281 10.3359 17.311 8.91094 15.8672 8.31094L15.0985 10.1578C15.8203 10.4578 16.3266 11.1703 16.3266 12.0047C16.3266 12.8344 15.8203 13.5469 15.0985 13.8516L15.8672 15.6984C17.311 15.0891 18.3281 13.6641 18.3281 12ZM17.4047 4.61719L16.636 6.46406C18.8063 7.36875 20.3297 9.50625 20.3297 12C20.3297 14.4984 18.8063 16.6313 16.636 17.5359L17.4047 19.3828C20.2969 18.1781 22.3266 15.3281 22.3266 12C22.3266 8.67188 20.2969 5.82188 17.4047 4.61719ZM2.32971 6.99844V16.9969H6.32815L13.3266 24V0L6.32815 6.99844H2.32971Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sound-level">
+                        <input type="range" name="sound-level" id="sound-level" min="0" max="1" step="0.001"
+                            value="0.1">
+                    </div>
+                    <div class="controls-repeat">
+                        <div class="repeat">
+                            <button>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M7 22L3 18L7 14L8.4 15.45L6.85 17H17V13H19V19H6.85L8.4 20.55L7 22ZM5 11V5H17.15L15.6 3.45L17 2L21 6L17 10L15.6 8.55L17.15 7H7V11H5Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="repeat-off">
+                            <button>
+                                <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.1665 10.9792L6.83317 8.33342L41.6665 43.1667L39.0207 45.8334L32.7707 39.5834H14.5832V45.8334L6.24984 37.5001L14.5832 29.1667V35.4168H28.604L14.5832 21.3959V22.9167H10.4165V17.2292L4.1665 10.9792ZM35.4165 27.0834H39.5832V35.7918L35.4165 31.6251V27.0834ZM35.4165 10.4167V4.16675L43.7498 12.5001L35.4165 20.8334V14.5834H18.3748L14.2082 10.4167H35.4165Z"
+                                        fill="black" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="controls-screen">
+                        <button>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3 21V16H5V19H8V21H3ZM16 21V19H19V16H21V21H16ZM3 8V3H8V5H5V8H3ZM19 8V5H16V3H21V8H19Z"
+                                    fill="black" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="player-close">
+                    <svg width="55" height="55" viewBox="0 0 55 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_2931_2441)">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M27 30.6525L33.6287 37.2812C33.9805 37.633 34.4576 37.8306 34.955 37.8306C35.4524 37.8306 35.9295 37.633 36.2812 37.2812C36.633 36.9295 36.8306 36.4524 36.8306 35.955C36.8306 35.4575 36.633 34.9805 36.2812 34.6287L29.65 28L36.28 21.3712C36.4541 21.1971 36.5921 20.9903 36.6863 20.7628C36.7805 20.5353 36.829 20.2914 36.8289 20.0452C36.8288 19.7989 36.7803 19.5551 36.686 19.3276C36.5917 19.1001 36.4535 18.8934 36.2794 18.7194C36.1052 18.5453 35.8985 18.4072 35.6709 18.313C35.4434 18.2188 35.1996 18.1704 34.9533 18.1705C34.7071 18.1705 34.4632 18.2191 34.2357 18.3134C34.0083 18.4076 33.8016 18.5458 33.6275 18.72L27 25.3487L20.3712 18.72C20.1984 18.5408 19.9915 18.3979 19.7628 18.2995C19.5341 18.2011 19.2881 18.1493 19.0391 18.147C18.7902 18.1447 18.5433 18.1921 18.3128 18.2862C18.0823 18.3804 17.8729 18.5195 17.6968 18.6955C17.5206 18.8715 17.3813 19.0807 17.2869 19.3111C17.1925 19.5415 17.145 19.7884 17.147 20.0373C17.1491 20.2863 17.2007 20.5324 17.2988 20.7612C17.397 20.99 17.5397 21.1969 17.7187 21.37L24.35 28L17.72 34.63C17.541 34.803 17.3983 35.01 17.3001 35.2388C17.2019 35.4676 17.1503 35.7137 17.1483 35.9626C17.1462 36.2116 17.1938 36.4585 17.2882 36.6888C17.3826 36.9192 17.5219 37.1285 17.698 37.3045C17.8742 37.4804 18.0836 37.6196 18.314 37.7137C18.5445 37.8079 18.7914 37.8552 19.0404 37.8529C19.2894 37.8507 19.5354 37.7988 19.7641 37.7005C19.9928 37.6021 20.1996 37.4591 20.3725 37.28L27 30.6525Z"
+                                fill="#DBD3C5" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_2931_2441">
+                                <rect width="30" height="30" fill="white" transform="translate(12 13)" />
+                            </clipPath>
+                        </defs>
                     </svg>
                 </div>
             </div>
