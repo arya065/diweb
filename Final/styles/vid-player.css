@@ -11,17 +11,20 @@
     margin: auto;
     background-color: rgba(219, 211, 197, 1);
     border-radius: 5px;
+    position: relative;
 }
 
 .video {
     width: 100%;
 }
-.player-close{
+
+.player-close {
     height: 55px;
     position: absolute;
     top: 0;
     right: 27px;
 }
+
 /* buttons and svg */
 .player button {
     border: none;
